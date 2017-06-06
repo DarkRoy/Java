@@ -10,10 +10,11 @@ public class GUI extends JFrame implements ActionListener {
 	
 	JButton JB1=new JButton();
 	JButton JB2=new JButton();
-	
-	public static void main(String[] args) {
-		
+	JButton JB3=new JButton();
 
+	public static void main(String[] args) {
+
+		
 	} 
 
 	@Override
