@@ -3,9 +3,12 @@ package GUI;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
 
+import javax.imageio.ImageIO;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 public class GUI extends JFrame implements ActionListener{
 
@@ -28,7 +31,6 @@ public class GUI extends JFrame implements ActionListener{
 		JBStart.addActionListener(this);
 		JBEnd.addActionListener(this);
 		
-		
 		this.add(JBStart);
 		this.add(JBEnd);
 		
@@ -41,7 +43,8 @@ public class GUI extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent event) {
 		if(event.getSource()==JBStart){
-			
+			BattleGUI BG=new BattleGUI();
+			this.dispose();
 		}
 		if(event.getSource()==JBEnd){
 			this.dispose();
