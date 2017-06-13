@@ -1,9 +1,16 @@
 package Logic;
 
-public class CHAR implements IEnemy {
+public class CHAR  {
 
-	public CHAR() {
-		// TODO Auto-generated constructor stub
+	private int HP;
+	private int ATK;
+	private String Name;
+	
+	public CHAR (int iHP, int iATK, String iName) {
+		HP = iHP;
+		ATK = iATK;
+		Name = iName;
 	}
 
+	
 }

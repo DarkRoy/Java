@@ -1,9 +1,22 @@
 package Data;
 
-public class EnemyList {
+import java.util.ArrayList;
 
+import Logic.IEnemy;
+
+public class EnemyList {
+ 
+	private ArrayList<IEnemy> EnemyList=new ArrayList<IEnemy>();
+	
 	public EnemyList() {
-		// TODO Auto-generated constructor stub
+		
+		
 	}
+	public void AddEnemy(IEnemy Enemy) {
+		EnemyList.add(Enemy);
+		System.out.println(Enemy.getName()+"");
+	} 
+		
+	
 
 }
