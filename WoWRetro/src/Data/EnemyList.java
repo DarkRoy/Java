@@ -14,7 +14,7 @@ public class EnemyList {
 	}
 	public void AddEnemy(IEnemy Enemy) {
 		EnemyList.add(Enemy);
-		System.out.println(Enemy.getName()+"");
+		System.out.println(Enemy.getATK()+"");
 	} 
 		
 	
