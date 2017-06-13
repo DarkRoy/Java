@@ -54,5 +54,11 @@ public class CHAR implements IEnemy {
 		System.out.println(this.HP);
 	}
 
+	@Override
+	public void DamageDealer() {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
 }
