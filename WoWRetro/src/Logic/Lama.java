@@ -2,18 +2,16 @@ package Logic;
 
 public class Lama extends CHAR implements IEnemy {
 
-	private int HP;
-	private int ATK;
-	private String Name;
+
 	
-	public Lama(int iHP, int iATK, String iName) {
-		super(iHP,iATK,iName);
-	}
-	
-	@Override
-	public void getHP() {
-		// TODO Auto-generated method stub
+	public Lama(int HP, int ATK, String Name) {
+		super(HP,ATK,Name);
 		
+	}
+
+	@Override
+	public int getHP() {
+		return HP;
 	}
 
 	@Override
@@ -23,8 +21,8 @@ public class Lama extends CHAR implements IEnemy {
 	}
 
 	@Override
-	public void getATK() {
-		// TODO Auto-generated method stub
+	public int getATK() {
+		return ATK;
 		
 	}
 
@@ -34,8 +32,8 @@ public class Lama extends CHAR implements IEnemy {
 		
 	}
 
-	
-	public String getName {
+	@Override
+	public String getName() {
 		return Name;
 	}
 
@@ -44,5 +42,8 @@ public class Lama extends CHAR implements IEnemy {
 		// TODO Auto-generated method stub
 		
 	}
+
+
+	
 
 }

@@ -2,18 +2,19 @@ package Logic;
 
 public class Player extends CHAR implements IEnemy {
 
-	private int HP;
-	private int ATK;
-	private String Name;
+	int AP = 5;
 	
-	public Player(int iHP, int iATK, String iName) {
-		super(iHP,iATK,iName);
+	public Player(int HP, int ATK, String Name) {
+		super(HP,ATK,Name);
+		this.HP=HP;
+		this.ATK=ATK;
+		this.Name=Name;
 	}
 
 	@Override
-	public void getHP() {
+	public int getHP() {
 		// TODO Auto-generated method stub
-		
+		return HP;
 	}
 
 	@Override
@@ -23,9 +24,9 @@ public class Player extends CHAR implements IEnemy {
 	}
 
 	@Override
-	public void getATK() {
+	public int getATK() {
 		// TODO Auto-generated method stub
-		
+		return ATK;
 	}
 
 	@Override
@@ -35,9 +36,9 @@ public class Player extends CHAR implements IEnemy {
 	}
 
 	@Override
-	public void getName() {
+	public String getName() {
 		// TODO Auto-generated method stub
-		
+		return Name;
 	}
 
 	@Override
@@ -45,5 +46,15 @@ public class Player extends CHAR implements IEnemy {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public void DamageDealer(int ATK, int AA) {
+		this.HP= this.HP - (ATK - (this.AP)/AA);
+		System.out.println(this.HP);
+		
+	}
+
+	
+	
 
 }

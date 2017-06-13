@@ -53,7 +53,7 @@ public class GUI extends JFrame implements ActionListener{
 		if(event.getSource()==JBStart){
 			BattleGUI BG=new BattleGUI();
 			this.dispose();
-			
+			AE.AddEnemyEntry();
 			
 		}
 		if(event.getSource()==JBEnd){

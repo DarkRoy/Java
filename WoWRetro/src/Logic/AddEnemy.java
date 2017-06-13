@@ -13,6 +13,8 @@ public class AddEnemy {
 		
 		EL.AddEnemy(Lama);
 		EL.AddEnemy(Robot);	
+		System.out.println(Robot.getHP());
+		Robot.DamageDealer(20, 0);
 		
 	}
 	

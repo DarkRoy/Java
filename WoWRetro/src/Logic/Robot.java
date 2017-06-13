@@ -2,18 +2,19 @@ package Logic;
 
 public class Robot extends CHAR implements IEnemy {
 
-	private int HP;
-	private int ATK;
-	private String Name;
+	int AP = 5;
 	
-	public Robot(int iHP, int iATK, String iName) {
-		super(iHP,iATK,iName);
+	public Robot(int HP, int ATK, String Name) {
+		super(HP,ATK,Name);
+		this.HP=HP;
+		this.ATK=ATK;
+		this.Name=Name;
 	}
 
 	@Override
 	public int getHP() {
-	return HP;
-		
+		// TODO Auto-generated method stub
+		return HP;
 	}
 
 	@Override
@@ -24,8 +25,8 @@ public class Robot extends CHAR implements IEnemy {
 
 	@Override
 	public int getATK() {
+		// TODO Auto-generated method stub
 		return ATK;
-		
 	}
 
 	@Override
@@ -36,8 +37,8 @@ public class Robot extends CHAR implements IEnemy {
 
 	@Override
 	public String getName() {
-	return Name;
-		
+		// TODO Auto-generated method stub
+		return Name;
 	}
 
 	@Override
@@ -46,4 +47,10 @@ public class Robot extends CHAR implements IEnemy {
 		
 	}
 
+	@Override
+	public void DamageDealer(int ATK, int AA) {
+		this.HP= this.HP - (ATK - (this.AP)/AA);
+		System.out.println(this.HP);
+		
+	}
 }
