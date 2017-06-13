@@ -5,6 +5,7 @@ import Data.EnemyList;
 public class AddEnemy {
 	
 	EnemyList EL=new EnemyList();
+	CHAR Char=new CHAR(0, 0, null);
 	
 	public void AddEnemyEntry() {
 		
@@ -15,6 +16,8 @@ public class AddEnemy {
 		EL.AddEnemy(Robot);	
 		
 	}
+	public CHAR getEnemy(){
+		return Char;
+	}
 	
-
 }

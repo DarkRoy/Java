@@ -9,6 +9,10 @@ import java.util.concurrent.TimeUnit;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+
+import Logic.AddEnemy;
+import Logic.Battle;
+
 import java.awt.Font;
 
 public class BattleGUI  extends JFrame implements ActionListener{
@@ -20,8 +24,12 @@ public class BattleGUI  extends JFrame implements ActionListener{
 	JLabel lblDamage2 = new JLabel("");
 	JLabel lbldamage1 = new JLabel("");
 	
+	Battle B=new Battle();
+	AddEnemy AE=new AddEnemy();
 	
 	public BattleGUI() {
+		
+		AE.AddEnemyEntry();
 		
 		getContentPane().setLayout(null);
 		this.setSize(1280,720);
@@ -66,6 +74,7 @@ public class BattleGUI  extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent event) {
 		if(event.getSource()==JBATK1){
+			
 			lblKampflog.setText("Du hast Schwertschlag eingesetzt");
 			lblDamage2.setText("60");
 			long startTime = System.currentTimeMillis();
