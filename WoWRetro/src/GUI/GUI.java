@@ -12,6 +12,9 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 import Logic.AddEnemy;
+import javax.swing.JSplitPane;
+import javax.swing.JTextField;
+import java.awt.Font;
 
 public class GUI extends JFrame implements ActionListener{
 
@@ -22,8 +25,10 @@ public class GUI extends JFrame implements ActionListener{
 	JLabel JLT=new JLabel();
 	
 	public GUI() {
+		getContentPane().setForeground(new Color(0, 0, 0));
+		getContentPane().setBackground(new Color(255, 255, 255));
 		
-		this.setLayout(null);
+		getContentPane().setLayout(null);
 		this.setSize(1280,720);
 		this.setVisible(true);
 		this.setForeground(Color.BLUE);
@@ -37,8 +42,13 @@ public class GUI extends JFrame implements ActionListener{
 		JBStart.addActionListener(this);
 		JBEnd.addActionListener(this);
 		
-		this.add(JBStart);
-		this.add(JBEnd);
+		getContentPane().add(JBStart);
+		getContentPane().add(JBEnd);
+		
+		JLabel lblIsland = new JLabel("Island Paradice");
+		lblIsland.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 60));
+		lblIsland.setBounds(418, 72, 513, 50);
+		getContentPane().add(lblIsland);
 		
 		java.net.URL imgURL = getClass().getResource("C:/Users/vmadmin/Desktop/Kampf-GUI.jpeg");
 		ImageIcon icon = new ImageIcon(imgURL);
