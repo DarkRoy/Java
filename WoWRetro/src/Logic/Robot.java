@@ -11,8 +11,8 @@ public class Robot extends CHAR implements IEnemy {
 	}
 
 	@Override
-	public void getHP() {
-		// TODO Auto-generated method stub
+	public int getHP() {
+	return HP;
 		
 	}
 
@@ -23,8 +23,8 @@ public class Robot extends CHAR implements IEnemy {
 	}
 
 	@Override
-	public void getATK() {
-		// TODO Auto-generated method stub
+	public int getATK() {
+		return ATK;
 		
 	}
 
@@ -35,8 +35,8 @@ public class Robot extends CHAR implements IEnemy {
 	}
 
 	@Override
-	public void getName() {
-		// TODO Auto-generated method stub
+	public String getName() {
+	return Name;
 		
 	}
 
