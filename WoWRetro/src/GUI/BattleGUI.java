@@ -88,6 +88,8 @@ public class BattleGUI  extends JFrame implements ActionListener{
 			
 		}
 		
+
+		
 		
 		
 }
