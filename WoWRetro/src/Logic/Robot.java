@@ -49,8 +49,8 @@ public class Robot extends CHAR implements IEnemy {
 
 	@Override
 	public void DamageDealer(int ATK, int AA) {
-		this.HP= this.HP - (ATK - (this.AP)/AA);
-		System.out.println(this.HP);
+		this.HP= this.HP - (ATK - ((this.AP)/AA));
+		System.out.println(this.HP +" Robot");
 		
 	}
 }

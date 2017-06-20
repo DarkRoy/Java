@@ -21,6 +21,7 @@ public class Battle {
 		this.ATK = Player.getATK();
 		Enemy.DamageDealer(ATK, this.AA);
 		this.ATK = Enemy.getATK();
+		this.AA = 1;
 		Player.DamageDealer(ATK, this.AA);
 	}
 	
