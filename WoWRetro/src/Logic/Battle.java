@@ -37,7 +37,7 @@ public class Battle {
 		this.AA = 1;
 		Player.DamageDealer(ATK, this.AA);
 		Schlag2 = Player.getDamageRec();
-		HPP = Enemy.getHP();
+		HPP = Player.getHP();
 		this.checkVitals();
 		
 		
