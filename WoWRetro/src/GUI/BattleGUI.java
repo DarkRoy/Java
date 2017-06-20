@@ -132,7 +132,7 @@ public class BattleGUI  extends JFrame implements ActionListener{
 			B.Attack(AA);
 			
 		
-			B.Attack(AA);
+			
 			JBATK1.disable();
 		while (elapsedTime < 0.5*1000) {
 		    elapsedTime = (new Date()).getTime() - startTime;
