@@ -92,6 +92,12 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		getContentPane().add(lblBackGround);
 		lblBackGround.setIcon(BackGround);
 		
+		if (B.Name.equals("Bender")){
+			
+		}
+		else if (B.Name.equals("Bob")){
+			
+		}
 		
 		
 		
@@ -116,7 +122,13 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		while (elapsedTime < 0.5*1000) {
 		    elapsedTime = (new Date()).getTime() - startTime;
 		}
-	
+		if (B.Name.equals("Bender")){
+			
+		}
+		else if (B.Name.equals("Bob")){
+			
+		}
+		
 		}
 		
 		
@@ -130,14 +142,18 @@ public class BattleGUI  extends JFrame implements ActionListener{
 			long startTime = System.currentTimeMillis();
 			long elapsedTime = 0L;
 			B.Attack(AA);
-			
-		
-			
 			JBATK1.disable();
 		while (elapsedTime < 0.5*1000) {
 		    elapsedTime = (new Date()).getTime() - startTime;
 		}
 		JBATK1.enable();
+		if (B.Name.equals("Bender")){
+			
+		}
+		else if (B.Name.equals("Bob")){
+			
+		}
+		
 		}
 		
 	}	
