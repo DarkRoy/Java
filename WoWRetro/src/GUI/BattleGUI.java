@@ -37,8 +37,8 @@ public class BattleGUI  extends JFrame implements ActionListener{
 	Battle B=new Battle();
 	int AA;
 	private final JLabel lblBackGround = new JLabel("");
-	private final JLabel lblNewLabel = new JLabel("100 Leben");
-	private final JLabel lblLeben = new JLabel("100 Leben");
+	private final JLabel lblLebenPlayer = new JLabel("100 Leben");
+	private final JLabel lblLebenGegner = new JLabel("100 Leben");
 	
 	
 	public BattleGUI() {
@@ -78,14 +78,15 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		lblImage.setBounds(114, 428, 177, 200);	
 		getContentPane().add(lblImage);
 		lblImage.setIcon(image);
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 18));
-		lblNewLabel.setBounds(114, 367, 126, 16);
 		
-		getContentPane().add(lblNewLabel);
-		lblLeben.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 18));
-		lblLeben.setBounds(919, 366, 161, 16);
+		lblLebenPlayer.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 18));
+		lblLebenPlayer.setBounds(114, 367, 126, 16);
+		getContentPane().add(lblLebenPlayer);
 		
-		getContentPane().add(lblLeben);
+		
+		lblLebenGegner.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 18));
+		lblLebenGegner.setBounds(919, 366, 161, 16);
+		getContentPane().add(lblLebenGegner);
 		
 		
 		lblBackGround.setBounds(12, 0, 1256, 638);
@@ -118,19 +119,19 @@ public class BattleGUI  extends JFrame implements ActionListener{
 			JBATK1.disable();
 			lblDamage2.setText("Gegner hat "+ B.Schlag2 +" Schaden erlitten!");
 			lblDamage1.setText("Du hast " + B.Schlag2 + " Schaden erlitten!");
+			lblLebenGegner.setText(B.HPE + " Leben");
+			lblLebenPlayer.setText(B.HPP + " Leben");
 		while (elapsedTime < 0.5*1000) {
 		    elapsedTime = (new Date()).getTime() - startTime;
-		}
-		lblDamage2.setText("Gegner hat "+ B.Schlag1 +" Schaden erlitten !");
+	}
 		if (B.Ending.equals("Bender")){
-			
 		}
 		else if (B.Ending.equals("Bob")){
-			
 		}
 		else if (B.Ending.equals("Lost")){
 			this.dispose();
-		}}
+		}
+}
 		
 		
 
@@ -148,17 +149,23 @@ public class BattleGUI  extends JFrame implements ActionListener{
 			JBATK1.disable();
 			lblDamage2.setText("Gegner hat "+ B.Schlag2 +" Schaden erlitten!");
 			lblDamage1.setText("Du hast " + B.Schlag2 + " Schaden erlitten!");
+			lblLebenGegner.setText(B.HPE + " Leben");
+			lblLebenPlayer.setText(B.HPP + " Leben");
+			
 		while (elapsedTime < 0.5*1000) {
 		    elapsedTime = (new Date()).getTime() - startTime;
 		}
 		JBATK1.enable();
-		lblDamage2.setText("Gegner hat "+ B.Schlag2 +" Schaden erlitten !");
 		if (B.Ending.equals("Bender")){
-			
 		}
 		else if (B.Ending.equals("Bob")){
-			
 		}
 		else if (B.Ending.equals("Lost")){
 			this.dispose();
-		}}}}
+		}
+}
+		
+	
+	
+}
+}
