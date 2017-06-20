@@ -23,8 +23,6 @@ public class BattleGUI  extends JFrame implements ActionListener{
 	JButton JBATK1=new JButton();
 	JButton JBATK2=new JButton();
 	JLabel lblKampflog = new JLabel("");
-	JButton GegnerAttack1 = new JButton();
-	JButton GegnerAttack2 = new JButton();
 	JLabel lblDamage2 = new JLabel("");
 	JLabel lbldamage1 = new JLabel("");
 	JLabel lblImage = new JLabel();
@@ -61,15 +59,6 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		
 		getContentPane().add(JBATK1);
 		getContentPane().add(JBATK2);
-		
-		GegnerAttack2.setText("Schildschlag");
-		GegnerAttack2.setBounds(919, 120, 200, 50);
-		getContentPane().add(GegnerAttack2);
-		
-
-		GegnerAttack1.setText("Schwerthieb");
-		GegnerAttack1.setBounds(919, 50, 200, 50);
-		getContentPane().add(GegnerAttack1);
 		
 		
 		lblKampflog.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 18));
@@ -109,10 +98,8 @@ public class BattleGUI  extends JFrame implements ActionListener{
 			lblImage.setIcon((image2));
 			AA = 3;
 			lblKampflog.setText("Du hast Schwerthieb eingesetzt");
+			
 
-			lblDamage2.setText("20");
-
-			lblDamage2.setText("");
 
 			long startTime = System.currentTimeMillis();
 			long elapsedTime = 0L;
@@ -122,6 +109,7 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		while (elapsedTime < 0.5*1000) {
 		    elapsedTime = (new Date()).getTime() - startTime;
 		}
+		lblDamage2.setText("Gegner hat "+ B.Schlag1 +" Schaden erlitten !");
 		if (B.Name.equals("Bender")){
 			
 		}
@@ -132,21 +120,24 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		}
 		
 		
-		
-		
+
 		if(event.getSource()==JBATK2){
 			lblImage.setIcon((image3));
 			AA = 1;
 			lblKampflog.setText("Du hast Schildschlag eingesetzt");
-			lblDamage2.setText("Gegner hat "+ B.Schlag1 +" Schaden erlitten !");
+			
 			long startTime = System.currentTimeMillis();
 			long elapsedTime = 0L;
 			B.Attack(AA);
+
+
+
 			JBATK1.disable();
 		while (elapsedTime < 0.5*1000) {
 		    elapsedTime = (new Date()).getTime() - startTime;
 		}
 		JBATK1.enable();
+		lblDamage2.setText("Gegner hat "+ B.Schlag2 +" Schaden erlitten !");
 		if (B.Name.equals("Bender")){
 			
 		}

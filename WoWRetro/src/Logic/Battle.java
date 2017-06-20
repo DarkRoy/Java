@@ -39,6 +39,7 @@ public class Battle {
 			System.out.println("Gegner besiegt");
 			this.Enemy=(CHAR) AE.getEnemy();
 			Name = Enemy.getName();
+
 		}
 		else if (Player.HP<=0){
 			System.exit(0);
