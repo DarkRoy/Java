@@ -81,10 +81,10 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		getContentPane().add(lblBackGround);
 		lblBackGround.setIcon(BackGround);
 		
-		if (B.Name.equals("Bender")){
+		if (B.Ending.equals("Bender")){
 			
 		}
-		else if (B.Name.equals("Bob")){
+		else if (B.Ending.equals("Bob")){
 			
 		}
 		
@@ -110,14 +110,15 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		    elapsedTime = (new Date()).getTime() - startTime;
 		}
 		lblDamage2.setText("Gegner hat "+ B.Schlag1 +" Schaden erlitten !");
-		if (B.Name.equals("Bender")){
+		if (B.Ending.equals("Bender")){
 			
 		}
-		else if (B.Name.equals("Bob")){
+		else if (B.Ending.equals("Bob")){
 			
 		}
-		
-		}
+		else if (B.Ending.equals("Lost")){
+			this.dispose();
+		}}
 		
 		
 
@@ -138,14 +139,12 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		}
 		JBATK1.enable();
 		lblDamage2.setText("Gegner hat "+ B.Schlag2 +" Schaden erlitten !");
-		if (B.Name.equals("Bender")){
+		if (B.Ending.equals("Bender")){
 			
 		}
-		else if (B.Name.equals("Bob")){
+		else if (B.Ending.equals("Bob")){
 			
 		}
-		
-		}
-		
-	}	
-}
+		else if (B.Ending.equals("Lost")){
+			this.dispose();
+		}}}}

@@ -12,12 +12,12 @@ public class Battle {
 	private int AA;
 	public int Schlag1;
 	public int Schlag2;
-	public String Name;
+	public String Ending;
 	
 	public Battle() {
 		AE.AddEnemyEntry();
 		this.Enemy=(CHAR) AE.getEnemy();
-		Name = Enemy.getName();
+		Ending = Enemy.getName();
 	}	
 	
 	
@@ -41,16 +41,10 @@ public class Battle {
 			AE.resetEnemy(Enemy);
 			System.out.println("Gegner besiegt");
 			this.Enemy=(CHAR) AE.getEnemy();
-			Name = Enemy.getName();
+			Ending = Enemy.getName();
 
 		}
 		else if (Player.HP<=0){
 			Lost L = new Lost();			
-			
-			
-		}
-		
-	
-	
-	
-}}
+			Ending = "Lost";
+		}}}
