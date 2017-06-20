@@ -92,6 +92,12 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		getContentPane().add(lblBackGround);
 		lblBackGround.setIcon(BackGround);
 		
+		if (B.Ending.equals("Bender")){
+			
+		}
+		else if (B.Ending.equals("Bob")){
+			
+		}
 		
 		
 		
@@ -102,7 +108,9 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		if(event.getSource()==JBATK1){
 			lblImage.setIcon((image2));
 			AA = 3;
+
 			lblKampflog.setText("Du hast Schwerthieb eingesetzt");
+
 			long startTime = System.currentTimeMillis();
 			long elapsedTime = 0L;
 		
@@ -113,8 +121,19 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		while (elapsedTime < 0.5*1000) {
 		    elapsedTime = (new Date()).getTime() - startTime;
 		}
-	}
-				
+		lblDamage2.setText("Gegner hat "+ B.Schlag1 +" Schaden erlitten !");
+		if (B.Ending.equals("Bender")){
+			
+		}
+		else if (B.Ending.equals("Bob")){
+			
+		}
+		else if (B.Ending.equals("Lost")){
+			this.dispose();
+		}}
+		
+		
+
 		if(event.getSource()==JBATK2){
 			lblImage.setIcon((image3));
 			AA = 1;
@@ -124,6 +143,8 @@ public class BattleGUI  extends JFrame implements ActionListener{
 			long elapsedTime = 0L;
 			B.Attack(AA);
 
+
+
 			JBATK1.disable();
 			lblDamage2.setText("Gegner hat "+ B.Schlag2 +" Schaden erlitten!");
 			lblDamage1.setText("Du hast " + B.Schlag2 + " Schaden erlitten!");
@@ -131,7 +152,13 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		    elapsedTime = (new Date()).getTime() - startTime;
 		}
 		JBATK1.enable();
+		lblDamage2.setText("Gegner hat "+ B.Schlag2 +" Schaden erlitten !");
+		if (B.Ending.equals("Bender")){
+			
 		}
-		
-	}	
-}
+		else if (B.Ending.equals("Bob")){
+			
+		}
+		else if (B.Ending.equals("Lost")){
+			this.dispose();
+		}}}}
