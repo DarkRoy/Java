@@ -36,6 +36,7 @@ public class Battle {
 			AE.resetEnemy(Enemy);
 			System.out.println("Gegner besiegt");
 			this.Enemy=(CHAR) AE.getEnemy();
+			
 		}
 		else if (Player.HP<=0){
 			System.exit(0);
