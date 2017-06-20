@@ -23,6 +23,8 @@ public class BattleGUI  extends JFrame implements ActionListener{
 	JButton JBATK1=new JButton();
 	JButton JBATK2=new JButton();
 	JLabel lblKampflog = new JLabel("");
+	JButton GegnerAttack1 = new JButton();
+	JButton GegnerAttack2 = new JButton();
 	JLabel lblDamage2 = new JLabel("");
 	JLabel lbldamage1 = new JLabel("");
 	JLabel lblImage = new JLabel();
@@ -59,10 +61,18 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		getContentPane().add(JBATK1);
 		getContentPane().add(JBATK2);
 		
+		GegnerAttack2.setText("Schildschlag");
+		GegnerAttack2.setBounds(919, 120, 200, 50);
+		getContentPane().add(GegnerAttack2);
+		
+
+		GegnerAttack1.setText("Schwerthieb");
+		GegnerAttack1.setBounds(919, 50, 200, 50);
+		getContentPane().add(GegnerAttack1);
 		
 		
 		lblKampflog.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 18));
-		lblKampflog.setBounds(100, 200, 402, 120);
+		lblKampflog.setBounds(418, 50, 402, 120);
 		getContentPane().add(lblKampflog);
 		
 		lblDamage2.setBounds(919, 270, 62, 42);
@@ -75,8 +85,8 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		lblLEBEN2.setBounds(919, 422, 56, 16);
 		getContentPane().add(lblLEBEN2);
 		
-		JLabel lblLEBEN1 = new JLabel("100");
-		lblLEBEN1.setBounds(100, 382, 146, 16);
+		JLabel lblLEBEN1 = new JLabel("");
+		lblLEBEN1.setBounds(100, 422, 56, 16);
 		getContentPane().add(lblLEBEN1);
 		
 		
@@ -119,7 +129,7 @@ public class BattleGUI  extends JFrame implements ActionListener{
 			lblImage.setIcon((image3));
 			AA = 1;
 			lblKampflog.setText("Du hast Schildschlag eingesetzt");
-			lblDamage2.setText("");
+			lblDamage2.setText("Gegner hat "+ B.Schlag1 +" Schaden erlitten !");
 			long startTime = System.currentTimeMillis();
 			long elapsedTime = 0L;
 		
