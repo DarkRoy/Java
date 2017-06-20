@@ -19,6 +19,7 @@ public class BattleGUI  extends JFrame implements ActionListener{
 	JButton GegnerAttack2 = new JButton();
 	JLabel lblDamage2 = new JLabel("");
 	JLabel lbldamage1 = new JLabel("");
+	private final JLabel lblImage = new JLabel("");
 	
 	
 	public BattleGUI() {
@@ -60,6 +61,17 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		
 		lbldamage1.setBounds(100, 270, 62, 42);
 		getContentPane().add(lbldamage1);
+		
+		JLabel lblLEBEN2 = new JLabel("");
+		lblLEBEN2.setBounds(919, 422, 56, 16);
+		getContentPane().add(lblLEBEN2);
+		
+		JLabel lblLEBEN1 = new JLabel("");
+		lblLEBEN1.setBounds(100, 422, 56, 16);
+		getContentPane().add(lblLEBEN1);
+		lblImage.setBounds(110, 446, 175, 199);
+		
+		getContentPane().add(lblImage);
 
 }
 
@@ -67,7 +79,7 @@ public class BattleGUI  extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent event) {
 		if(event.getSource()==JBATK1){
 			lblKampflog.setText("Du hast Schwertschlag eingesetzt");
-			lblDamage2.setText("60");
+			lblDamage2.setText("20");
 			long startTime = System.currentTimeMillis();
 			long elapsedTime = 0L;
 			
