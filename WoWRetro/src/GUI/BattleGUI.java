@@ -26,13 +26,14 @@ public class BattleGUI  extends JFrame implements ActionListener{
 	JLabel lblDamage2 = new JLabel("");
 	JLabel lblDamage1 = new JLabel("");
 	JLabel lblImage = new JLabel();
+	JLabel lblImage2 = new JLabel();
 	
 	
 	ImageIcon image = new ImageIcon("src/Neutral.PNG");
 	ImageIcon image2 = new ImageIcon("src/Schwerthieb.PNG");
 	ImageIcon image3 = new ImageIcon("src/Schildhieb.PNG");
 	ImageIcon BackGround = new ImageIcon("src/Kampf-GUI.PNG");
-	
+	ImageIcon imageE = new ImageIcon("src/NeutralLama.PNG");
 	
 	Battle B=new Battle();
 	int AA;
@@ -73,7 +74,11 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		
 		lblDamage1.setBounds(100, 270, 200, 42);
 		getContentPane().add(lblDamage1);
-			
+		
+		
+		lblImage2.setBounds(919, 428, 177, 200);
+		getContentPane().add(lblImage2);
+		lblImage2.setIcon(imageE);	
 		
 		lblImage.setBounds(114, 428, 177, 200);	
 		getContentPane().add(lblImage);
@@ -89,7 +94,7 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		getContentPane().add(lblLebenGegner);
 		
 		
-		lblBackGround.setBounds(12, 0, 1256, 638);
+		lblBackGround.setBounds(0, 0, 1256, 638);
 		getContentPane().add(lblBackGround);
 		lblBackGround.setIcon(BackGround);
 		
