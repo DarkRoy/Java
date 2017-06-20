@@ -22,10 +22,12 @@ public class Battle {
 		this.ATK = Player.getATK();
 		Enemy.DamageDealer(ATK, this.AA);
 		this.checkVitals();
-		
+		Schlag1 = Enemy.getDamageRec();
 		this.ATK = Enemy.getATK();
 		this.AA = 1;
 		Player.DamageDealer(ATK, this.AA);
+		Schlag2 = Player.getDamageRec();
+		this.checkVitals();
 		
 		
 	}

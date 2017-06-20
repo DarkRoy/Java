@@ -36,7 +36,8 @@ public class Player extends CHAR implements IEnemy {
 
 	@Override
 	public void DamageDealer(int ATK, int AA) {
-		this.HP= this.HP - (ATK - ((this.AP)/AA));
+		DMG = ATK - (this.AP / AA);
+		this.HP=this.HP -  DMG;
 		System.out.println(this.HP+" Player");
 		
 	}

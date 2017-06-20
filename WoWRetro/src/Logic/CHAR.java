@@ -6,6 +6,7 @@ public class CHAR implements IEnemy {
 	protected int ATK;
 	protected int MAXHP;
 	protected String Name;
+	protected int DMG;
 	
 	public CHAR (int HP, int ATK, String Name, int MAXHP) {
 		this.HP = HP;
@@ -53,7 +54,8 @@ public class CHAR implements IEnemy {
 
 	@Override
 	public void DamageDealer(int ATK, int AA) {
-		this.HP = this.HP - ATK;
+		DMG =  ATK;
+		this.HP = this.HP - DMG;
 		System.out.println(this.HP +" "+ this.Name);
 	}
 
@@ -68,6 +70,11 @@ public class CHAR implements IEnemy {
 	public void setMAXHP(int MAXHP) {
 		// TODO Auto-generated method stub
 		this.MAXHP = MAXHP;
+	}
+
+	@Override
+	public int getDamageRec() {
+		return DMG;
 	}
 
 	
