@@ -24,7 +24,7 @@ public class BattleGUI  extends JFrame implements ActionListener{
 	JButton JBATK2=new JButton();
 	JLabel lblKampflog = new JLabel("");
 	JLabel lblDamage2 = new JLabel("");
-	JLabel lbldamage1 = new JLabel("");
+	JLabel lblDamage1 = new JLabel("");
 	JLabel lblImage = new JLabel();
 	
 	
@@ -37,6 +37,8 @@ public class BattleGUI  extends JFrame implements ActionListener{
 	Battle B=new Battle();
 	int AA;
 	private final JLabel lblBackGround = new JLabel("");
+	private final JLabel lblLebenPlayer = new JLabel();
+	private final JLabel lblLebenGegner = new JLabel();
 	
 	
 	public BattleGUI() {
@@ -46,6 +48,7 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		this.setVisible(true);
 		this.setForeground(Color.BLUE);
 		this.setResizable(false);
+		this.setTitle("Island Paradice");
 		
 		JBATK1.setBounds(100, 50, 200, 50);
 		JBATK2.setBounds(100, 120, 200, 50);
@@ -68,18 +71,31 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		lblDamage2.setBounds(919, 270, 304, 42);
 		getContentPane().add(lblDamage2);
 		
-		lbldamage1.setBounds(100, 270, 62, 42);
-		getContentPane().add(lbldamage1);
+		lblDamage1.setBounds(100, 270, 200, 42);
+		getContentPane().add(lblDamage1);
 			
 		
 		lblImage.setBounds(114, 428, 177, 200);	
 		getContentPane().add(lblImage);
 		lblImage.setIcon(image);
 		
+		lblLebenPlayer.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 18));
+		lblLebenPlayer.setBounds(114, 367, 126, 16);
+		getContentPane().add(lblLebenPlayer);
 		
-		lblBackGround.setBounds(0, 0, 1256, 638);
+		
+		lblLebenGegner.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 18));
+		lblLebenGegner.setBounds(919, 366, 161, 16);
+		getContentPane().add(lblLebenGegner);
+		
+		
+		lblBackGround.setBounds(12, 0, 1256, 638);
 		getContentPane().add(lblBackGround);
 		lblBackGround.setIcon(BackGround);
+		
+		
+		lblLebenGegner.setText(B.HPE + " Leben");
+		lblLebenPlayer.setText(B.HPP + " Leben");
 		
 		if (B.Ending.equals("Bender")){
 			
@@ -99,28 +115,34 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		if(event.getSource()==JBATK1){
 			lblImage.setIcon((image2));
 			AA = 3;
-			lblKampflog.setText("Du hast Schwerthieb eingesetzt");
-			
 
+			lblKampflog.setText("Du hast Schwerthieb eingesetzt");
 
 			long startTime = System.currentTimeMillis();
 			long elapsedTime = 0L;
 		
 			B.Attack(AA);
 			JBATK1.disable();
+			lblDamage2.setText("Gegner hat "+ B.Schlag1 +" Schaden erlitten!");
+			lblDamage1.setText("Du hast " + B.Schlag2 + " Schaden erlitten!");
+			lblLebenGegner.setText(B.HPE + " Leben");
+			lblLebenPlayer.setText(B.HPP + " Leben");
+			if (B.HPE <= 0){
+				lblDamage2.setText("Gegner wurde besiegt.");
+				lblLebenGegner.setText("TOD");
+			}
+			
 		while (elapsedTime < 0.5*1000) {
 		    elapsedTime = (new Date()).getTime() - startTime;
-		}
-		lblDamage2.setText("Gegner hat "+ B.Schlag1 +" Schaden erlitten !");
+	}
 		if (B.Ending.equals("Bender")){
-			
 		}
 		else if (B.Ending.equals("Bob")){
-			
 		}
 		else if (B.Ending.equals("Lost")){
 			this.dispose();
-		}}
+		}
+}
 		
 		
 
@@ -128,7 +150,7 @@ public class BattleGUI  extends JFrame implements ActionListener{
 			lblImage.setIcon((image3));
 			AA = 1;
 			lblKampflog.setText("Du hast Schildschlag eingesetzt");
-			
+
 			long startTime = System.currentTimeMillis();
 			long elapsedTime = 0L;
 			B.Attack(AA);
@@ -136,17 +158,29 @@ public class BattleGUI  extends JFrame implements ActionListener{
 
 
 			JBATK1.disable();
+			lblDamage2.setText("Gegner hat "+ B.Schlag1 +" Schaden erlitten!");
+			lblDamage1.setText("Du hast " + B.Schlag2 + " Schaden erlitten!");
+			lblLebenGegner.setText(B.HPE + " Leben");
+			lblLebenPlayer.setText(B.HPP + " Leben");
+			if (B.HPE <= 0){
+				lblDamage2.setText("Gegner wurde besiegt.");
+				lblLebenGegner.setText("TOD");
+			}
+			
 		while (elapsedTime < 0.5*1000) {
 		    elapsedTime = (new Date()).getTime() - startTime;
 		}
 		JBATK1.enable();
-		lblDamage2.setText("Gegner hat "+ B.Schlag2 +" Schaden erlitten !");
 		if (B.Ending.equals("Bender")){
-			
 		}
 		else if (B.Ending.equals("Bob")){
-			
 		}
 		else if (B.Ending.equals("Lost")){
 			this.dispose();
-		}}}}
+		}
+}
+		
+	
+	
+}
+}

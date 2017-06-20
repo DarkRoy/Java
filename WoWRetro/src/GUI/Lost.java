@@ -30,6 +30,7 @@ public class Lost extends JFrame implements ActionListener{
 		this.setSize(1280,720);
 		this.setVisible(true);
 		this.setForeground(Color.BLUE);
+		this.setTitle("Island Paradice");
 		
 		BtnReset.setBounds(540, 200, 200, 50);
 		BtnClose.setBounds(540, 270, 200, 50);

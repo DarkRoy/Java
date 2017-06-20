@@ -13,6 +13,8 @@ public class Battle {
 	public int Schlag1;
 	public int Schlag2;
 	public String Ending;
+	public int HPP;
+	public int HPE;
 	
 	public Battle() {
 		AE.AddEnemyEntry();
@@ -22,16 +24,21 @@ public class Battle {
 	
 	
 	
+	
 	public void Attack(int AA){
 		this.AA=AA;
 		this.ATK = Player.getATK();
 		Enemy.DamageDealer(ATK, this.AA);
+		HPE = Enemy.getHP();
 		this.checkVitals();
 		Schlag1 = Enemy.getDamageRec();
+		
+		
 		this.ATK = Enemy.getATK();
 		this.AA = 1;
 		Player.DamageDealer(ATK, this.AA);
 		Schlag2 = Player.getDamageRec();
+		HPP = Player.getHP();
 		this.checkVitals();
 		
 		
@@ -42,6 +49,7 @@ public class Battle {
 			System.out.println("Gegner besiegt");
 			this.Enemy=(CHAR) AE.getEnemy();
 			Ending = Enemy.getName();
+			
 
 		}
 		else if (Player.HP<=0){
