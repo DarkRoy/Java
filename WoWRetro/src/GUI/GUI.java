@@ -17,8 +17,6 @@ import javax.swing.JTextField;
 import java.awt.Font;
 
 public class GUI extends JFrame implements ActionListener{
-
-	AddEnemy AE=new AddEnemy();
 	
 	JButton JBStart=new JButton();
 	JButton JBEnd=new JButton();
@@ -50,9 +48,9 @@ public class GUI extends JFrame implements ActionListener{
 		lblIsland.setBounds(418, 72, 513, 50);
 		getContentPane().add(lblIsland);
 		
-		java.net.URL imgURL = getClass().getResource("C:/Users/vmadmin/Desktop/Kampf-GUI.jpeg");
+		/*java.net.URL imgURL = getClass().getResource("C:/Users/vmadmin/Desktop/Kampf-GUI.jpeg");
 		ImageIcon icon = new ImageIcon(imgURL);
-        JLT.setIcon(icon);           
+        JLT.setIcon(icon);  */         
 	
 	}
 
@@ -63,7 +61,6 @@ public class GUI extends JFrame implements ActionListener{
 		if(event.getSource()==JBStart){
 			BattleGUI BG=new BattleGUI();
 			this.dispose();
-			AE.AddEnemyEntry();
 			
 		}
 		if(event.getSource()==JBEnd){

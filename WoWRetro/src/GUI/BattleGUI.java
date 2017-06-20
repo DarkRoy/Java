@@ -9,6 +9,11 @@ import java.util.concurrent.TimeUnit;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+
+import Logic.AddEnemy;
+import Logic.Battle;
+import Logic.CHAR;
+
 import java.awt.Font;
 
 public class BattleGUI  extends JFrame implements ActionListener{
@@ -19,10 +24,21 @@ public class BattleGUI  extends JFrame implements ActionListener{
 	JButton GegnerAttack2 = new JButton();
 	JLabel lblDamage2 = new JLabel("");
 	JLabel lbldamage1 = new JLabel("");
-	private final JLabel lblImage = new JLabel("");
+	JLabel lblImage = new JLabel("");
+	
+	Battle B=new Battle();
+	CHAR Enemy=new CHAR(0, 0, null);
+	AddEnemy AE=new AddEnemy();
+	int AA;
 	
 	
 	public BattleGUI() {
+		
+		
+		
+		AE.AddEnemyEntry();
+		this.Enemy=(CHAR) AE.getEnemy();
+		B.getEnemy(Enemy);
 		
 		getContentPane().setLayout(null);
 		this.setSize(1280,720);
@@ -78,14 +94,33 @@ public class BattleGUI  extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent event) {
 		if(event.getSource()==JBATK1){
+			AA = 3;
 			lblKampflog.setText("Du hast Schwertschlag eingesetzt");
+
 			lblDamage2.setText("20");
+
+			lblDamage2.setText("");
+
 			long startTime = System.currentTimeMillis();
 			long elapsedTime = 0L;
-			
-
+		
+			B.Attack(AA);
 			JBATK1.disable();
-		while (elapsedTime < 2*1000) {
+		while (elapsedTime < 0.5*1000) {
+		    elapsedTime = (new Date()).getTime() - startTime;
+		}
+		JBATK1.enable();
+		}
+		if(event.getSource()==JBATK2){
+			AA = 1;
+			lblKampflog.setText("Du hast Schwertstoss eingesetzt");
+			lblDamage2.setText("");
+			long startTime = System.currentTimeMillis();
+			long elapsedTime = 0L;
+		
+			B.Attack(AA);
+			JBATK1.disable();
+		while (elapsedTime < 0.5*1000) {
 		    elapsedTime = (new Date()).getTime() - startTime;
 		}
 		JBATK1.enable();
