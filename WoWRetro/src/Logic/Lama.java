@@ -4,8 +4,8 @@ public class Lama extends CHAR implements IEnemy {
 
 
 	
-	public Lama(int HP, int ATK, String Name) {
-		super(HP,ATK,Name);
+	public Lama(int HP, int ATK, String Name, int MAXHP) {
+		super(HP,ATK,Name,MAXHP);
 		
 	}
 
@@ -16,7 +16,6 @@ public class Lama extends CHAR implements IEnemy {
 
 	@Override
 	public void setHP() {
-		// TODO Auto-generated method stub
 		
 	}
 

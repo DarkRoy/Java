@@ -4,11 +4,12 @@ public class Robot extends CHAR implements IEnemy {
 
 	int AP = 5;
 	
-	public Robot(int HP, int ATK, String Name) {
-		super(HP,ATK,Name);
+	public Robot(int HP, int ATK, String Name, int MAXHP) {
+		super(HP,ATK,Name, MAXHP);
 		this.HP=HP;
 		this.ATK=ATK;
 		this.Name=Name;
+		this.MAXHP = MAXHP;
 	}
 
 	@Override

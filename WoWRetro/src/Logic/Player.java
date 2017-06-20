@@ -4,8 +4,8 @@ public class Player extends CHAR implements IEnemy {
 
 	int AP = 5;
 	
-	public Player(int HP, int ATK, String Name) {
-		super(HP,ATK,Name);
+	public Player(int HP, int ATK, String Name, int MAXHP) {
+		super(HP,ATK,Name,MAXHP);
 		this.HP=HP;
 		this.ATK=ATK;
 		this.Name=Name;
