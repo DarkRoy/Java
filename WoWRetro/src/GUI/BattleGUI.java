@@ -37,8 +37,8 @@ public class BattleGUI  extends JFrame implements ActionListener{
 	Battle B=new Battle();
 	int AA;
 	private final JLabel lblBackGround = new JLabel("");
-	private final JLabel lblLebenPlayer = new JLabel("100 Leben");
-	private final JLabel lblLebenGegner = new JLabel("100 Leben");
+	private final JLabel lblLebenPlayer = new JLabel();
+	private final JLabel lblLebenGegner = new JLabel();
 	
 	
 	public BattleGUI() {
@@ -93,6 +93,10 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		getContentPane().add(lblBackGround);
 		lblBackGround.setIcon(BackGround);
 		
+		
+		lblLebenGegner.setText(B.HPE + " Leben");
+		lblLebenPlayer.setText(B.HPP + " Leben");
+		
 		if (B.Ending.equals("Bender")){
 			
 		}
@@ -117,10 +121,15 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		
 			B.Attack(AA);
 			JBATK1.disable();
-			lblDamage2.setText("Gegner hat "+ B.Schlag2 +" Schaden erlitten!");
+			lblDamage2.setText("Gegner hat "+ B.Schlag1 +" Schaden erlitten!");
 			lblDamage1.setText("Du hast " + B.Schlag2 + " Schaden erlitten!");
 			lblLebenGegner.setText(B.HPE + " Leben");
 			lblLebenPlayer.setText(B.HPP + " Leben");
+			if (B.HPE <= 0){
+				lblDamage2.setText("Gegner wurde besiegt.");
+				lblLebenGegner.setText("TOD");
+			}
+			
 		while (elapsedTime < 0.5*1000) {
 		    elapsedTime = (new Date()).getTime() - startTime;
 	}
@@ -147,10 +156,14 @@ public class BattleGUI  extends JFrame implements ActionListener{
 
 
 			JBATK1.disable();
-			lblDamage2.setText("Gegner hat "+ B.Schlag2 +" Schaden erlitten!");
+			lblDamage2.setText("Gegner hat "+ B.Schlag1 +" Schaden erlitten!");
 			lblDamage1.setText("Du hast " + B.Schlag2 + " Schaden erlitten!");
 			lblLebenGegner.setText(B.HPE + " Leben");
 			lblLebenPlayer.setText(B.HPP + " Leben");
+			if (B.HPE <= 0){
+				lblDamage2.setText("Gegner wurde besiegt.");
+				lblLebenGegner.setText("TOD");
+			}
 			
 		while (elapsedTime < 0.5*1000) {
 		    elapsedTime = (new Date()).getTime() - startTime;

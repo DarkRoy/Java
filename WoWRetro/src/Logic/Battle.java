@@ -24,6 +24,7 @@ public class Battle {
 	
 	
 	
+	
 	public void Attack(int AA){
 		this.AA=AA;
 		this.ATK = Player.getATK();
@@ -48,6 +49,7 @@ public class Battle {
 			System.out.println("Gegner besiegt");
 			this.Enemy=(CHAR) AE.getEnemy();
 			Ending = Enemy.getName();
+			
 
 		}
 		else if (Player.HP<=0){
