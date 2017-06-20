@@ -11,6 +11,7 @@ public interface IEnemy {
 	public int getMAXHP();
 	public void setMAXHP(int MAXHP);
 	void DamageDealer(int ATK, int AA);
+	public int getDamageRec();
 	
 	
 	

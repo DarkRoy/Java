@@ -18,11 +18,7 @@ public class Robot extends CHAR implements IEnemy {
 		return HP;
 	}
 
-	@Override
-	public void setHP() {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
 	@Override
 	public int getATK() {
@@ -30,11 +26,7 @@ public class Robot extends CHAR implements IEnemy {
 		return ATK;
 	}
 
-	@Override
-	public void setATK() {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
 	@Override
 	public String getName() {
@@ -42,15 +34,11 @@ public class Robot extends CHAR implements IEnemy {
 		return Name;
 	}
 
-	@Override
-	public void setName() {
-		// TODO Auto-generated method stub
-		
-	}
 
 	@Override
 	public void DamageDealer(int ATK, int AA) {
-		this.HP= this.HP - (ATK - ((this.AP)/AA));
+		DMG = ATK - (this.AP / AA);
+		this.HP=this.HP -  DMG;
 		System.out.println(this.HP +" Robot");
 		
 	}

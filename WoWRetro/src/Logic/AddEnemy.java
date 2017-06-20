@@ -6,10 +6,11 @@ import Data.EnemyList;
 
 public class AddEnemy {
 	
-	EnemyList EL=new EnemyList();
-	CHAR Char=new CHAR(0, 0, null,0);
-	Lama Lama=new Lama(80,12,"Bob",80);
-	Robot Robot=new Robot(90,10,"Bender",90);
+	private EnemyList EL=new EnemyList();
+	private CHAR Char=new CHAR(0, 0, null,0);
+	private Lama Lama=new Lama(80,12,"Bob",80);
+	private Robot Robot=new Robot(90,10,"Bender",90);
+	private int a;
 	
 	public void AddEnemyEntry() {
 		
@@ -20,7 +21,7 @@ public class AddEnemy {
 		
 	}
 	public CHAR getEnemy(){
-		int a = (int) Math.floor((Math.random() * 2) + 1);
+		a = (int) Math.floor((Math.random() * 2) + 1);
 		if (a==1){
 			return Robot;
 		}
