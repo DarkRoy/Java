@@ -1,14 +1,17 @@
 package GUI;
 
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 import Logic.AddEnemy;
 import Logic.Battle;
@@ -24,9 +27,18 @@ public class BattleGUI  extends JFrame implements ActionListener{
 	JButton GegnerAttack2 = new JButton();
 	JLabel lblDamage2 = new JLabel("");
 	JLabel lbldamage1 = new JLabel("");
+	JLabel lblImage = new JLabel();
+	
+	
+	ImageIcon image = new ImageIcon("src/Neutral.PNG");
+	ImageIcon image2 = new ImageIcon("src/Schwerthieb.PNG");
+	ImageIcon image3 = new ImageIcon("src/Schildhieb.PNG");
+	ImageIcon BackGround = new ImageIcon("src/Kampf-GUI.PNG");
+	
 	
 	Battle B=new Battle();
 	int AA;
+	private final JLabel lblBackGround = new JLabel("");
 	
 	
 	public BattleGUI() {
@@ -68,15 +80,37 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		
 		lbldamage1.setBounds(100, 270, 62, 42);
 		getContentPane().add(lbldamage1);
-
+		
+		JLabel lblLEBEN2 = new JLabel("");
+		lblLEBEN2.setBounds(919, 422, 56, 16);
+		getContentPane().add(lblLEBEN2);
+		
+		JLabel lblLEBEN1 = new JLabel("");
+		lblLEBEN1.setBounds(100, 422, 56, 16);
+		getContentPane().add(lblLEBEN1);
+		
+		
+		lblImage.setBounds(110, 446, 177, 200);	
+		getContentPane().add(lblImage);
+		lblImage.setIcon(image);
+		
+		
+		lblBackGround.setBounds(0, 0, 1262, 673);
+		getContentPane().add(lblBackGround);
+		lblBackGround.setIcon(BackGround);
 }
 
 	@Override
 	public void actionPerformed(ActionEvent event) {
 		if(event.getSource()==JBATK1){
+			lblImage.setIcon((image2));
 			AA = 3;
-			lblKampflog.setText("Du hast Schwertschlag eingesetzt");
+			lblKampflog.setText("Du hast Schwerthieb eingesetzt");
+
+			lblDamage2.setText("20");
+
 			lblDamage2.setText("");
+
 			long startTime = System.currentTimeMillis();
 			long elapsedTime = 0L;
 		
@@ -87,9 +121,14 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		}
 		JBATK1.enable();
 		}
+		
+		
+		
+		
 		if(event.getSource()==JBATK2){
+			lblImage.setIcon((image3));
 			AA = 1;
-			lblKampflog.setText("Du hast Schwertstoss eingesetzt");
+			lblKampflog.setText("Du hast Schildschlag eingesetzt");
 			lblDamage2.setText("");
 			long startTime = System.currentTimeMillis();
 			long elapsedTime = 0L;
