@@ -4,12 +4,14 @@ public class CHAR implements IEnemy {
 
 	protected int HP;
 	protected int ATK;
+	protected int MAXHP;
 	protected String Name;
 	
-	public CHAR (int HP, int ATK, String Name) {
+	public CHAR (int HP, int ATK, String Name, int MAXHP) {
 		this.HP = HP;
 		this.ATK = ATK;
 		this.Name = Name;
+		this.MAXHP = MAXHP;
 	}
 
 	@Override
@@ -19,8 +21,9 @@ public class CHAR implements IEnemy {
 	}
 
 	@Override
-	public void setHP() {
+	public void setHP(int HP) {
 		// TODO Auto-generated method stub
+		this.HP = HP;
 		
 	}
 
@@ -31,9 +34,9 @@ public class CHAR implements IEnemy {
 	}
 
 	@Override
-	public void setATK() {
+	public void setATK(int ATK) {
 		// TODO Auto-generated method stub
-		
+		this.ATK = ATK;
 	}
 
 	@Override
@@ -43,21 +46,28 @@ public class CHAR implements IEnemy {
 	}
 
 	@Override
-	public void setName() {
-		// TODO Auto-generated method stub
+	public void setName(String Name) {
+		this.Name = Name;
 		
 	}
 
 	@Override
 	public void DamageDealer(int ATK, int AA) {
 		this.HP = this.HP - ATK;
-		System.out.println(this.HP);
+		System.out.println(this.HP +" "+ this.Name);
+	}
+
+
+	@Override
+	public int getMAXHP() {
+		// TODO Auto-generated method stub
+		return MAXHP;
 	}
 
 	@Override
-	public void DamageDealer() {
+	public void setMAXHP(int MAXHP) {
 		// TODO Auto-generated method stub
-		
+		this.MAXHP = MAXHP;
 	}
 
 	

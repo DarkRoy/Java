@@ -35,19 +35,11 @@ public class BattleGUI  extends JFrame implements ActionListener{
 	
 	
 	Battle B=new Battle();
-	CHAR Enemy=new CHAR(0, 0, null);
-	AddEnemy AE=new AddEnemy();
 	int AA;
 	private final JLabel lblBackGround = new JLabel("");
 	
 	
 	public BattleGUI() {
-		
-		
-		
-		AE.AddEnemyEntry();
-		this.Enemy=(CHAR) AE.getEnemy();
-		B.getEnemy(Enemy);
 		
 		getContentPane().setLayout(null);
 		this.setSize(1280,720);
