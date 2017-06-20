@@ -54,7 +54,7 @@ public class CHAR implements IEnemy {
 	@Override
 	public void DamageDealer(int ATK, int AA) {
 		this.HP = this.HP - ATK;
-		System.out.println(this.HP);
+		System.out.println(this.HP +" "+ this.Name);
 	}
 
 

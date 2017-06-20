@@ -1,5 +1,7 @@
 package Logic;
 
+import static java.lang.Math.random;
+
 import Data.EnemyList;
 
 public class AddEnemy {
@@ -18,8 +20,15 @@ public class AddEnemy {
 		
 	}
 	public CHAR getEnemy(){
-
-		return Robot;
+		int a = (int) Math.floor((Math.random() * 2) + 1);
+		if (a==1){
+			return Robot;
+		}
+		
+		else if (a==2){
+			return Lama;
+		}
+		return Char;
 	}
 	public void resetEnemy(CHAR Enemy){
 		Enemy.setHP(Enemy.getMAXHP());

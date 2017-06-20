@@ -7,7 +7,7 @@ public class Battle {
 	AddEnemy AE=new AddEnemy();
 	int ATK;
 	int AA;
-	String Answer;
+	String Gegner;
 	
 	public Battle() {
 		AE.AddEnemyEntry();
@@ -30,10 +30,14 @@ public class Battle {
 	public void checkVitals(){
 		if (Enemy.HP<= 0) {
 			AE.resetEnemy(Enemy);
+			System.out.println("Gegner besiegt");
+			this.Enemy=(CHAR) AE.getEnemy();
 		}
 		else if (Player.HP<=0){
 			System.exit(0);
+			
 		}
+		
 	
 	
 	
