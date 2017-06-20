@@ -24,7 +24,7 @@ public class BattleGUI  extends JFrame implements ActionListener{
 	JButton JBATK2=new JButton();
 	JLabel lblKampflog = new JLabel("");
 	JLabel lblDamage2 = new JLabel("");
-	JLabel lbldamage1 = new JLabel("");
+	JLabel lblDamage1 = new JLabel("");
 	JLabel lblImage = new JLabel();
 	
 	
@@ -37,6 +37,8 @@ public class BattleGUI  extends JFrame implements ActionListener{
 	Battle B=new Battle();
 	int AA;
 	private final JLabel lblBackGround = new JLabel("");
+	private final JLabel lblNewLabel = new JLabel("100 Leben");
+	private final JLabel lblLeben = new JLabel("100 Leben");
 	
 	
 	public BattleGUI() {
@@ -46,6 +48,7 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		this.setVisible(true);
 		this.setForeground(Color.BLUE);
 		this.setResizable(false);
+		this.setTitle("Island Paradice");
 		
 		JBATK1.setBounds(100, 50, 200, 50);
 		JBATK2.setBounds(100, 120, 200, 50);
@@ -68,16 +71,24 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		lblDamage2.setBounds(919, 270, 304, 42);
 		getContentPane().add(lblDamage2);
 		
-		lbldamage1.setBounds(100, 270, 62, 42);
-		getContentPane().add(lbldamage1);
+		lblDamage1.setBounds(100, 270, 200, 42);
+		getContentPane().add(lblDamage1);
 			
 		
 		lblImage.setBounds(114, 428, 177, 200);	
 		getContentPane().add(lblImage);
 		lblImage.setIcon(image);
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 18));
+		lblNewLabel.setBounds(114, 367, 126, 16);
+		
+		getContentPane().add(lblNewLabel);
+		lblLeben.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 18));
+		lblLeben.setBounds(919, 366, 161, 16);
+		
+		getContentPane().add(lblLeben);
 		
 		
-		lblBackGround.setBounds(0, 0, 1256, 638);
+		lblBackGround.setBounds(12, 0, 1256, 638);
 		getContentPane().add(lblBackGround);
 		lblBackGround.setIcon(BackGround);
 		
@@ -92,14 +103,13 @@ public class BattleGUI  extends JFrame implements ActionListener{
 			lblImage.setIcon((image2));
 			AA = 3;
 			lblKampflog.setText("Du hast Schwerthieb eingesetzt");
-			lblDamage2.setText("Gegner hat "+ B.Schlag1 +" Schaden erlitten !");
-
-
 			long startTime = System.currentTimeMillis();
 			long elapsedTime = 0L;
 		
 			B.Attack(AA);
 			JBATK1.disable();
+			lblDamage2.setText("Gegner hat "+ B.Schlag2 +" Schaden erlitten!");
+			lblDamage1.setText("Du hast " + B.Schlag2 + " Schaden erlitten!");
 		while (elapsedTime < 0.5*1000) {
 		    elapsedTime = (new Date()).getTime() - startTime;
 		}
@@ -109,12 +119,14 @@ public class BattleGUI  extends JFrame implements ActionListener{
 			lblImage.setIcon((image3));
 			AA = 1;
 			lblKampflog.setText("Du hast Schildschlag eingesetzt");
-			lblDamage2.setText("Gegner hat "+ B.Schlag2 +" Schaden erlitten !");
+
 			long startTime = System.currentTimeMillis();
 			long elapsedTime = 0L;
 			B.Attack(AA);
 
 			JBATK1.disable();
+			lblDamage2.setText("Gegner hat "+ B.Schlag2 +" Schaden erlitten!");
+			lblDamage1.setText("Du hast " + B.Schlag2 + " Schaden erlitten!");
 		while (elapsedTime < 0.5*1000) {
 		    elapsedTime = (new Date()).getTime() - startTime;
 		}

@@ -21,6 +21,8 @@ public class GUI extends JFrame implements ActionListener{
 	JButton JBStart=new JButton();
 	JButton JBEnd=new JButton();
 	JLabel JLT=new JLabel();
+	JLabel lblBackGround = new JLabel();
+	ImageIcon BackGround = new ImageIcon("src/Kampf-GUI.PNG");
 	
 	public GUI() {
 		getContentPane().setForeground(new Color(0, 0, 0));
@@ -30,6 +32,7 @@ public class GUI extends JFrame implements ActionListener{
 		this.setSize(1280,720);
 		this.setVisible(true);
 		this.setForeground(Color.BLUE);
+		this.setTitle("Island Paradice");
 		
 		JBStart.setBounds(540, 200, 200, 50);
 		JBEnd.setBounds(540, 270, 200, 50);
@@ -47,6 +50,11 @@ public class GUI extends JFrame implements ActionListener{
 		lblIsland.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 60));
 		lblIsland.setBounds(418, 72, 513, 50);
 		getContentPane().add(lblIsland);
+		
+		
+		lblBackGround.setBounds(0, 0, 1262, 673);
+		getContentPane().add(lblBackGround);
+		lblBackGround.setIcon(BackGround);
 		
 		/*java.net.URL imgURL = getClass().getResource("C:/Users/vmadmin/Desktop/Kampf-GUI.jpeg");
 		ImageIcon icon = new ImageIcon(imgURL);
