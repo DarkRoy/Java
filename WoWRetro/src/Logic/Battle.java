@@ -1,5 +1,8 @@
 package Logic;
 
+import GUI.BattleGUI;
+import GUI.Lost;
+
 public class Battle {
 
 	private CHAR Enemy=new CHAR(0, 0, null,0);
@@ -42,7 +45,8 @@ public class Battle {
 
 		}
 		else if (Player.HP<=0){
-			System.exit(0);
+			Lost L = new Lost();			
+			
 			
 		}
 		
