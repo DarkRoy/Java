@@ -33,7 +33,8 @@ public class BattleGUI  extends JFrame implements ActionListener{
 	ImageIcon image2 = new ImageIcon("src/Schwerthieb.PNG");
 	ImageIcon image3 = new ImageIcon("src/Schildhieb.PNG");
 	ImageIcon BackGround = new ImageIcon("src/Kampf-GUI.PNG");
-	ImageIcon imageE = new ImageIcon("src/NeutralLama.PNG");
+	ImageIcon imageE = new ImageIcon();
+	
 	
 	Battle B=new Battle();
 	int AA;
@@ -103,10 +104,12 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		lblLebenPlayer.setText(B.getHPP() + " Leben");
 		
 		if (B.getEnding().equals("Bender")){
-			
+			ImageIcon imageE = new ImageIcon("src/RobotBoy.PNG");
+			lblImage2.setIcon(imageE);	
 		}
 		else if (B.getEnding().equals("Bob")){
-			
+			ImageIcon imageE = new ImageIcon("src/NeutralLama.PNG");
+			lblImage2.setIcon(imageE);	
 		}
 		
 
@@ -141,11 +144,12 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		    elapsedTime = (new Date()).getTime() - startTime;
 	}
 		if (B.getEnding().equals("Bender")){
+			ImageIcon imageE = new ImageIcon("src/RobotBoy.PNG");
+			lblImage2.setIcon(imageE);	
 		}
 		else if (B.getEnding().equals("Bob")){
-		}
-		else if (B.getEnding().equals("Lost")){
-			this.dispose();
+			ImageIcon imageE = new ImageIcon("src/NeutralLama.PNG");
+			lblImage2.setIcon(imageE);	
 		}
 }
 		
@@ -177,11 +181,12 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		}
 		JBATK1.enable();
 		if (B.getEnding().equals("Bender")){
+			ImageIcon imageE = new ImageIcon("src/RobotBoy.PNG");
+			lblImage2.setIcon(imageE);	
 		}
 		else if (B.getEnding().equals("Bob")){
-		}
-		else if (B.getEnding().equals("Lost")){
-			this.dispose();
+			ImageIcon imageE = new ImageIcon("src/NeutralLama.PNG");
+			lblImage2.setIcon(imageE);	
 		}
 }
 		
