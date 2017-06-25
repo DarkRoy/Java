@@ -23,7 +23,7 @@ public class Robot extends CHAR implements IEnemy {
 	@Override
 	public int getATK() {
 		// TODO Auto-generated method stub
-		return (int) (ATK + Math.floor((Math.random() * 100) + 1));
+		return (int) (ATK + Math.floor((Math.random() * 10) + 1));
 	}
 
 	
