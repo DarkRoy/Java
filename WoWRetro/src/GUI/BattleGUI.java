@@ -99,13 +99,13 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		lblBackGround.setIcon(BackGround);
 		
 		
-		lblLebenGegner.setText(B.HPE + " Leben");
-		lblLebenPlayer.setText(B.HPP + " Leben");
+		lblLebenGegner.setText(B.getHPE() + " Leben");
+		lblLebenPlayer.setText(B.getHPP() + " Leben");
 		
-		if (B.Ending.equals("Bender")){
+		if (B.getEnding().equals("Bender")){
 			
 		}
-		else if (B.Ending.equals("Bob")){
+		else if (B.getEnding().equals("Bob")){
 			
 		}
 		
@@ -128,23 +128,23 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		
 			B.Attack(AA);
 			JBATK1.disable();
-			lblDamage2.setText("Gegner hat "+ B.Schlag1 +" Schaden erlitten!");
-			lblDamage1.setText("Du hast " + B.Schlag2 + " Schaden erlitten!");
-			lblLebenGegner.setText(B.HPE + " Leben");
-			lblLebenPlayer.setText(B.HPP + " Leben");
-			if (B.HPE <= 0){
-				lblDamage2.setText("Gegner wurde besiegt.");
-				lblLebenGegner.setText("TOD");
+			lblDamage2.setText("Gegner hat "+ B.getSchlag1() +" Schaden erlitten!");
+			lblDamage1.setText("Du hast " + B.getSchlag2() + " Schaden erlitten!");
+			lblLebenGegner.setText(B.getHPE() + " Leben");
+			lblLebenPlayer.setText(B.getHPP() + " Leben");
+			if (B.getHPE() <= 0){
+				lblDamage2.setText("Gegner wurde besiegt. Gegnerischer" +B.getEnding()+ " ist erschienen.");
+				lblLebenGegner.setText(B.getHPP() + " Leben");
 			}
 			
 		while (elapsedTime < 0.5*1000) {
 		    elapsedTime = (new Date()).getTime() - startTime;
 	}
-		if (B.Ending.equals("Bender")){
+		if (B.getEnding().equals("Bender")){
 		}
-		else if (B.Ending.equals("Bob")){
+		else if (B.getEnding().equals("Bob")){
 		}
-		else if (B.Ending.equals("Lost")){
+		else if (B.getEnding().equals("Lost")){
 			this.dispose();
 		}
 }
@@ -163,11 +163,11 @@ public class BattleGUI  extends JFrame implements ActionListener{
 
 
 			JBATK1.disable();
-			lblDamage2.setText("Gegner hat "+ B.Schlag1 +" Schaden erlitten!");
-			lblDamage1.setText("Du hast " + B.Schlag2 + " Schaden erlitten!");
-			lblLebenGegner.setText(B.HPE + " Leben");
-			lblLebenPlayer.setText(B.HPP + " Leben");
-			if (B.HPE <= 0){
+			lblDamage2.setText("Gegner hat "+ B.getSchlag1() +" Schaden erlitten!");
+			lblDamage1.setText("Du hast " + B.getSchlag2() + " Schaden erlitten!");
+			lblLebenGegner.setText(B.getHPE() + " Leben");
+			lblLebenPlayer.setText(B.getHPP() + " Leben");
+			if (B.getHPE() <= 0){
 				lblDamage2.setText("Gegner wurde besiegt.");
 				lblLebenGegner.setText("TOD");
 			}
@@ -176,11 +176,11 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		    elapsedTime = (new Date()).getTime() - startTime;
 		}
 		JBATK1.enable();
-		if (B.Ending.equals("Bender")){
+		if (B.getEnding().equals("Bender")){
 		}
-		else if (B.Ending.equals("Bob")){
+		else if (B.getEnding().equals("Bob")){
 		}
-		else if (B.Ending.equals("Lost")){
+		else if (B.getEnding().equals("Lost")){
 			this.dispose();
 		}
 }

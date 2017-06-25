@@ -10,16 +10,18 @@ public class Battle {
 	private AddEnemy AE=new AddEnemy();
 	private int ATK;
 	private int AA;
-	public int Schlag1;
-	public int Schlag2;
-	public String Ending;
-	public int HPP;
-	public int HPE;
+	private int Schlag1;
+	private int Schlag2;
+	private String Ending;
+	private int HPP;
+	private int HPE;
 	
 	public Battle() {
 		AE.AddEnemyEntry();
 		this.Enemy=(CHAR) AE.getEnemy();
 		Ending = Enemy.getName();
+		HPE = Enemy.getHP();
+		HPP = Player.getHP();
 	}	
 	
 	
@@ -43,6 +45,40 @@ public class Battle {
 		
 		
 	}
+	
+	public int getSchlag1(){
+		return Schlag1;
+	}
+	public int getSchlag2(){
+		return Schlag2;
+	}
+	public int getHPP(){
+		return HPP;
+	}
+	public int getHPE(){
+		return HPE;
+	}
+	public String getEnding(){
+		return Ending;
+	}
+	
+	public void setHPE(int HPE){
+		 this.HPE=HPE;
+	}
+	public void setHPP(int HPP){
+		 this.HPP=HPP;
+	}
+	public void setSchlag1(int Schlag1){
+		 this.Schlag1=Schlag1;
+	}
+	public void setSchlag2(int Schlag2){
+		 this.Schlag2=Schlag2;
+	}
+	public void getEnding(String Ending){
+		this.Ending = Ending;
+	}
+
+	
 	public void checkVitals(){
 		if (Enemy.HP<= 0) {
 			AE.resetEnemy(Enemy);
