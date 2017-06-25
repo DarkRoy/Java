@@ -1,6 +1,5 @@
 package Logic;
 
-import GUI.BattleGUI;
 import GUI.Lost;
 
 public class Battle {
@@ -31,8 +30,8 @@ public class Battle {
 		this.AA=AA;
 		this.ATK = Player.getATK();
 		Enemy.DamageDealer(ATK, this.AA);
-		HPE = Enemy.getHP();
 		this.checkVitals();
+		HPE = Enemy.getHP();
 		Schlag1 = Enemy.getDamageRec();
 		
 		
@@ -85,7 +84,7 @@ public class Battle {
 			System.out.println("Gegner besiegt");
 			this.Enemy=(CHAR) AE.getEnemy();
 			Ending = Enemy.getName();
-			
+			Player.setHP(Player.getHP()+Player.getMAXHP()/3);
 
 		}
 		else if (Player.HP<=0){

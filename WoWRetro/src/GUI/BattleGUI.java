@@ -136,21 +136,25 @@ public class BattleGUI  extends JFrame implements ActionListener{
 			lblLebenGegner.setText(B.getHPE() + " Leben");
 			lblLebenPlayer.setText(B.getHPP() + " Leben");
 			if (B.getHPE() <= 0){
-				lblDamage2.setText("Gegner wurde besiegt. Gegnerischer" +B.getEnding()+ " ist erschienen.");
-				lblLebenGegner.setText(B.getHPP() + " Leben");
+				lblDamage2.setText("Gegner wurde besiegt. Gegnerischer " +B.getEnding()+ " ist erschienen.");
+				lblLebenGegner.setText(B.getHPE() + " Leben");
+			}
+			if (B.getEnding().equals("Bender")){
+				ImageIcon imageE = new ImageIcon("src/RobotBoy.PNG");
+				lblImage2.setIcon(imageE);	
+			}
+			else if (B.getEnding().equals("Bob")){
+				ImageIcon imageE = new ImageIcon("src/NeutralLama.PNG");
+				lblImage2.setIcon(imageE);	
+			}
+			else if (B.getEnding().equals("Lost")){
+				this.dispose();
 			}
 			
 		while (elapsedTime < 0.5*1000) {
 		    elapsedTime = (new Date()).getTime() - startTime;
 	}
-		if (B.getEnding().equals("Bender")){
-			ImageIcon imageE = new ImageIcon("src/RobotBoy.PNG");
-			lblImage2.setIcon(imageE);	
-		}
-		else if (B.getEnding().equals("Bob")){
-			ImageIcon imageE = new ImageIcon("src/NeutralLama.PNG");
-			lblImage2.setIcon(imageE);	
-		}
+		
 }
 		
 		
@@ -172,22 +176,26 @@ public class BattleGUI  extends JFrame implements ActionListener{
 			lblLebenGegner.setText(B.getHPE() + " Leben");
 			lblLebenPlayer.setText(B.getHPP() + " Leben");
 			if (B.getHPE() <= 0){
-				lblDamage2.setText("Gegner wurde besiegt.");
-				lblLebenGegner.setText("TOD");
+				lblDamage2.setText("Gegner wurde besiegt. Gegnerischer " +B.getEnding()+ " ist erschienen.");
+				lblLebenGegner.setText(B.getHPE() + " Leben");
+			}
+			if (B.getEnding().equals("Bender")){
+				ImageIcon imageE = new ImageIcon("src/RobotBoy.PNG");
+				lblImage2.setIcon(imageE);	
+			}
+			else if (B.getEnding().equals("Bob")){
+				ImageIcon imageE = new ImageIcon("src/NeutralLama.PNG");
+				lblImage2.setIcon(imageE);	
+			}
+			else if (B.getEnding().equals("Lost")){
+				this.dispose();
 			}
 			
 		while (elapsedTime < 0.5*1000) {
 		    elapsedTime = (new Date()).getTime() - startTime;
 		}
 		JBATK1.enable();
-		if (B.getEnding().equals("Bender")){
-			ImageIcon imageE = new ImageIcon("src/RobotBoy.PNG");
-			lblImage2.setIcon(imageE);	
-		}
-		else if (B.getEnding().equals("Bob")){
-			ImageIcon imageE = new ImageIcon("src/NeutralLama.PNG");
-			lblImage2.setIcon(imageE);	
-		}
+		
 }
 		
 	

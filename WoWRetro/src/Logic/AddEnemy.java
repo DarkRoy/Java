@@ -1,7 +1,5 @@
 package Logic;
 
-import static java.lang.Math.random;
-
 import Data.EnemyList;
 
 public class AddEnemy {
