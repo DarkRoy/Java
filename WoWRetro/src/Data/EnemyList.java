@@ -4,7 +4,11 @@ import java.util.ArrayList;
 
 import Logic.IEnemy;
 
-
+/**
+ * 
+ * @author Nicola / Nemanja / Garcia
+ *
+ */
 
 public class EnemyList {
 	
