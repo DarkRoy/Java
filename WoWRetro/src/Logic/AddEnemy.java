@@ -2,6 +2,10 @@ package Logic;
 
 import Data.EnemyList;
 
+/**
+ * @author Nicola / Nemanja / Garcia
+ *
+ */
 public class AddEnemy {
 	
 	//EnemyList 
