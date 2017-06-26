@@ -9,27 +9,39 @@ import GUI.Lost;
 
 public class Battle {
 
-	// CHAR zur verarbeitung eines Enemies
+	/**
+	 *  CHAR zur verarbeitung eines Enemies
+	 */
 	private CHAR Enemy=new CHAR(0, 0, null,0);
 	
-	// Der Spieler
+	/**
+	 *  Der Spieler
+	 */
 	private Player Player=new Player(100,15,"Spieler",100);
 	
-	// ADD Enemy 
+	/**
+	 *  ADD Enemy 
+	 */
 	private AddEnemy AE=new AddEnemy();
 	
-	// Variablen fuer weiterverarbeitungen
+	/**
+	 *  Variablen fuer weiterverarbeitungen
+	 */
 	private int ATK;
 	private int AA;
 	
-	// Variablen fuer das GUI
+	/**
+	 *  Variablen fuer das GUI
+	 */
 	private int Schlag1;
 	private int Schlag2;
 	private String Ending;
 	private int HPP;
 	private int HPE;
 	
-	// Holt den ersten Enemy und setzt parameter fuer das GUI
+	/**
+	 *  Holt den ersten Enemy und setzt die parameter fuer das GUI
+	 */
 	public Battle() {
 		AE.AddEnemyEntry();
 		this.Enemy=(CHAR) AE.getEnemy();
@@ -42,9 +54,10 @@ public class Battle {
 	
 	
 	/**
-	 * Fuehrt den Lebensabzug durch
-	 * @param AA = AttackArt (Schwerthieb oder Schildschlag)
-	 * 
+	 * Fuehrt den Lebensabzug durch und Setzt HPE und HPP.
+	 * Dazu uebruepft es den Lebenstatus von den CHAR's (this.checkVitals();).
+	 * Durch den AA wert kann mit dem ATK Wert in den CHAR Unterklassen der Schaden berehcnet werden.
+	 * @param AA 
 	 */
 	public void Attack(int AA){
 		
