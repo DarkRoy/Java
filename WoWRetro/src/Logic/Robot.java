@@ -8,7 +8,7 @@ public class Robot extends CHAR implements IEnemy {
 	 * @param HP Wie viel leben der Gegner hat
 	 * @param ATK Wieviel Schaden der Gegber macht
  	 * @param Name Wie der Gegner heisst
-	 * @param MAXHP Was für ein maximales Leben der Gegner hat
+	 * @param MAXHP Was für ein anfangs Leben der Gegner hat
 	 */
 	public Robot(int HP, int ATK, String Name, int MAXHP) {
 		super(HP,ATK,Name, MAXHP);
@@ -19,7 +19,7 @@ public class Robot extends CHAR implements IEnemy {
 	}
 	/** 
 	 * In dieser Methode wird die Stärke der Attacke mit einer Zufallszahl berechnet
-	 * @RETURN Gibt die Stärke der Attacke aus als Variabel ATK
+	 * @return int  Gibt die Stärke der Attacke aus als Variabel ATK
 	 */	
 	@Override
 	public int getATK() {
@@ -28,7 +28,8 @@ public class Robot extends CHAR implements IEnemy {
 
 	/**
 	 * Berechnet den Schaden am Gegner
-	 * @param Int Variabeln Für AttackArt und Schaden
+	 * @param ATK = Schadensmenge
+	 * @param AA = Attack Art
 	 */
 	@Override
 	public void DamageDealer(int ATK, int AA) {

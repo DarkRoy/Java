@@ -1,28 +1,21 @@
 package GUI;
 
 import java.awt.Color;
-import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Date;
-import java.util.concurrent.TimeUnit;
-
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
-
-import Logic.AddEnemy;
 import Logic.Battle;
-import Logic.CHAR;
-
 import java.awt.Font;
 
 /**
  * @author Nicola / Nemanja / Garcia
  */
 
+@SuppressWarnings("serial")
 public class BattleGUI  extends JFrame implements ActionListener{
 
 	JButton JBATK1=new JButton();
@@ -127,6 +120,7 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		
 }
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public void actionPerformed(ActionEvent event) {
 		if(event.getSource()==JBATK1){

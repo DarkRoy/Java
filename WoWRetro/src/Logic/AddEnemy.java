@@ -58,7 +58,7 @@ public class AddEnemy {
 	
 	/**
 	 *  Setzte den Enemy zur wiederverwendung zurueck (nur HP)
-	 * @param Enemy
+	 * @param Enemy = Gegner der geresetet werden soll
 	 */
 	public void resetEnemy(CHAR Enemy){
 		Enemy.setHP(Enemy.getMAXHP());

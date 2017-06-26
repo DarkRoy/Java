@@ -57,7 +57,7 @@ public class Battle {
 	 * Fuehrt den Lebensabzug durch und Setzt HPE und HPP.
 	 * Dazu uebruepft es den Lebenstatus von den CHAR's (this.checkVitals();).
 	 * Durch den AA wert kann mit dem ATK Wert in den CHAR Unterklassen der Schaden berehcnet werden.
-	 * @param AA 
+	 * @param AA AttackArt 
 	 */
 	public void Attack(int AA){
 		
@@ -142,21 +142,21 @@ public class Battle {
 	}
 	/**
 	 * Schlag Damage vom Player dieser Runde wird gesetzt
-	 * @param Schlag1 
+	 * @param Schlag1 = Schlagdamage des Players
 	 */
 	public void setSchlag1(int Schlag1){
 		 this.Schlag1=Schlag1;
 	}
 	/**
 	 * Schlag Damage vom Enemy dieser Runde wird gesetzt
-	 * @param Schlag2 
+	 * @param Schlag2 = Schlagdamage des Gegners
 	 */
 	public void setSchlag2(int Schlag2){
 		 this.Schlag2=Schlag2;
 	}
 	/**
 	 * Auskommen der Runde wird gesetzt
-	 * @param Schlag2
+	 * @param Ending = Was passiert ist (neuer Gegner / spieler Tod)
 	 */
 	public void getEnding(String Ending){
 		this.Ending = Ending;
