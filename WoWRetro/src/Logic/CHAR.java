@@ -56,7 +56,7 @@ public class CHAR implements IEnemy {
 	public void DamageDealer(int ATK, int AA) {
 		DMG =  ATK;
 		this.HP = this.HP - DMG;
-		System.out.println(this.HP +" "+ this.Name);
+		
 	}
 
 

@@ -16,6 +16,11 @@ import javax.swing.JSplitPane;
 import javax.swing.JTextField;
 import java.awt.Font;
 
+/**
+ * @author Nicola / Nemanja / Garcia
+ * @version 1.0
+ */
+
 public class GUI extends JFrame implements ActionListener{
 	
 	JButton JBStart=new JButton();
@@ -24,10 +29,12 @@ public class GUI extends JFrame implements ActionListener{
 	JLabel lblBackGround = new JLabel();
 	ImageIcon BackGround = new ImageIcon("src/Kampf-GUI.PNG");
 	
+	/**
+	 * In dieser Methode, wird das ganze GUI auspositioniert
+	 */
 	public GUI() {
 		getContentPane().setForeground(new Color(0, 0, 0));
 		getContentPane().setBackground(new Color(255, 255, 255));
-		
 		getContentPane().setLayout(null);
 		this.setSize(1280,720);
 		this.setVisible(true);
@@ -56,14 +63,15 @@ public class GUI extends JFrame implements ActionListener{
 		getContentPane().add(lblBackGround);
 		lblBackGround.setIcon(BackGround);
 		
-		/*java.net.URL imgURL = getClass().getResource("C:/Users/vmadmin/Desktop/Kampf-GUI.jpeg");
-		ImageIcon icon = new ImageIcon(imgURL);
-        JLT.setIcon(icon);  */         
+       
 	
 	}
 
 	
 
+	/** 
+	 * Hier wird festgelegt was passiert, wenn einer der beiden Knöpfe betätigt wird
+	 */
 	@Override
 	public void actionPerformed(ActionEvent event) {
 		if(event.getSource()==JBStart){

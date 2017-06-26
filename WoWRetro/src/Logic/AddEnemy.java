@@ -13,7 +13,7 @@ public class AddEnemy {
 	public void AddEnemyEntry() {
 		
 		
-		System.out.println(Robot.HP);
+		
 		EL.AddEnemy(Lama);
 		EL.AddEnemy(Robot);	
 		
