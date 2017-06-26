@@ -10,7 +10,7 @@ public class EnemyList {
 	
  
 	/** 
-	 * Speichert IEnemy Objekte in die ArrayList
+	 * Das ist die ArrayList
 	 */
 	private ArrayList<IEnemy> EnemyList=new ArrayList<IEnemy>();
 	
@@ -19,8 +19,7 @@ public class EnemyList {
 		
 	}
 	/**
-	 * Diese Methode speichert IEnemy Objekte in die ArrayList EnemyList
-	 * @param Enemy Variable mit dem Datentyp IEnemy
+	 * Speichert die mitgegeben Enemies in die ArrayList
 	 */
 	public void AddEnemy(IEnemy Enemy) {
 		EnemyList.add(Enemy);
