@@ -19,7 +19,13 @@ import Logic.CHAR;
 
 import java.awt.Font;
 
+/**
+ * @author Nicola / Nemanja / Garcia
+ *
+ */
+
 public class BattleGUI  extends JFrame implements ActionListener{
+
 	JButton JBATK1=new JButton();
 	JButton JBATK2=new JButton();
 	JLabel lblKampflog = new JLabel("");
@@ -42,6 +48,10 @@ public class BattleGUI  extends JFrame implements ActionListener{
 	private final JLabel lblLebenPlayer = new JLabel();
 	private final JLabel lblLebenGegner = new JLabel();
 	
+	
+	/**
+	 * In dieser Methode, wird das ganze GUI auspositioniert
+	 */
 	
 	public BattleGUI() {
 		
