@@ -17,7 +17,7 @@ public class Robot extends CHAR implements IEnemy {
 		this.Name=Name;
 		this.MAXHP = MAXHP;
 	}
-	/** ^
+	/** 
 	 * In dieser Methode wird die Stärke der Attacke mit einer Zufallszahl berechnet
 	 * @RETURN Gibt die Stärke der Attacke aus als Variabel ATK
 	 */	
