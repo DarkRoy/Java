@@ -21,7 +21,7 @@ public class Player extends CHAR implements IEnemy {
 	 * In dieser Methode wird die Stärke der Attacke mit einer Zufallszahl berechnet
 	 * @RETURN Gibt die Stärke der Attacke aus als Variabel ATK
 	 */
-	@Override
+
 	public int getATK() {
 		return (int) (ATK + Math.floor((Math.random() * 10) + 1));
 	}

@@ -4,6 +4,12 @@ public class Robot extends CHAR implements IEnemy {
 
 	int AP = 5;
 	
+	/**
+	 * @param HP Wie viel leben der Gegner hat
+	 * @param ATK Wieviel Schaden der Gegber macht
+ 	 * @param Name Wie der Gegner heisst
+	 * @param MAXHP Was für ein maximales Leben der Gegner hat
+	 */
 	public Robot(int HP, int ATK, String Name, int MAXHP) {
 		super(HP,ATK,Name, MAXHP);
 		this.HP=HP;
