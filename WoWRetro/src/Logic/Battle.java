@@ -2,6 +2,11 @@ package Logic;
 
 import GUI.Lost;
 
+/**
+ * @author Nicola / Nemanja / Garcia
+ */
+
+
 public class Battle {
 
 	// CHAR zur verarbeitung eines Enemies
@@ -35,10 +40,16 @@ public class Battle {
 	
 	
 	
-	// Attack Ablauf
+	
+	/**
+	 * Fuehrt den Lebensabzug durch
+	 * @param AA = AttackArt (Schwerthieb oder Schildschlag)
+	 */
 	public void Attack(int AA){
 		
-		// AA = Attack ARt (Schwerthieb oder Schildschlag)
+		/**
+		 *  AA = Attack ARt (Schwerthieb oder Schildschlag)
+		 */
 		this.AA=AA;
 		// Player Damage
 		this.ATK = Player.getATK();
@@ -67,7 +78,6 @@ public class Battle {
 	
 	}
 	
-	// Getter und Setter fuer Variablen fuer das GUI
 	
 	public int getSchlag1(){
 		return Schlag1;
@@ -85,23 +95,43 @@ public class Battle {
 		return Ending;
 	}
 	
+	/**
+	 * 
+	 * @param HPE = Health Point Enemy
+	 */
 	public void setHPE(int HPE){
 		 this.HPE=HPE;
 	}
+	/**
+	 * 
+	 * @param HPP = Health Point Player
+	 */
 	public void setHPP(int HPP){
 		 this.HPP=HPP;
 	}
+	/**
+	 * 
+	 * @param Schlag1 = Schlag Damage vom Player dieser Runde
+	 */
 	public void setSchlag1(int Schlag1){
 		 this.Schlag1=Schlag1;
 	}
+	/**
+	 * 
+	 * @param Schlag2 = Schlag Damage vom Enemy dieser Runde
+	 */
 	public void setSchlag2(int Schlag2){
 		 this.Schlag2=Schlag2;
 	}
+	/**
+	 * 
+	 * @param Schlag2 = Auskommen der Runde
+	 */
 	public void getEnding(String Ending){
 		this.Ending = Ending;
 	}
 
-	/* Uebruepft ob Enemy oder Player unter 0 Leben sind
+	/** Uebruepft ob Enemy oder Player unter 0 Leben sind
 	 * Wenn der Gegner 0 trifft wird er geresetet in Add Enemy
 	 * und ein neuer wird geholt aus dem Zufallsgenerator
 	 * Falls der Spieler 0 HP hta und der Gegner mehr als 0

@@ -10,7 +10,7 @@ public class EnemyList {
 	
  
 	/** 
-	 * Speichert IEnemy Objekte in die ArrayList
+	 * Das ist die ArrayList
 	 */
 	private ArrayList<IEnemy> EnemyList=new ArrayList<IEnemy>();
 	

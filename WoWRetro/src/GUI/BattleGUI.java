@@ -21,7 +21,6 @@ import java.awt.Font;
 
 /**
  * @author Nicola / Nemanja / Garcia
- *
  */
 
 public class BattleGUI  extends JFrame implements ActionListener{
