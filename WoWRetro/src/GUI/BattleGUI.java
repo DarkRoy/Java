@@ -167,9 +167,6 @@ public class BattleGUI  extends JFrame implements ActionListener{
 			long startTime = System.currentTimeMillis();
 			long elapsedTime = 0L;
 			B.Attack(AA);
-
-
-
 			JBATK1.disable();
 			lblDamage2.setText("Gegner hat "+ B.getSchlag1() +" Schaden erlitten!");
 			lblDamage1.setText("Du hast " + B.getSchlag2() + " Schaden erlitten!");
