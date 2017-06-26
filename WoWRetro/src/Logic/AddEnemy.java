@@ -18,13 +18,8 @@ public class AddEnemy {
 	private int a;
 	
 	public void AddEnemyEntry() {
-		
-<<<<<<< HEAD
 		// Fuegt Gegner in die EnemyList im Data Layer
-=======
-		
-		
->>>>>>> branch 'master' of https://github.com/DarkRoy/Java.git
+
 		EL.AddEnemy(Lama);
 		EL.AddEnemy(Robot);	
 		
