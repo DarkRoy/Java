@@ -111,7 +111,6 @@ public class Battle {
 	public void checkVitals(){
 		if (Enemy.HP<= 0) {
 			AE.resetEnemy(Enemy);
-			System.out.println("Gegner besiegt");
 			this.Enemy=(CHAR) AE.getEnemy();
 			Ending = Enemy.getName();
 			Player.setHP(Player.getHP()+Player.getMAXHP()/3);

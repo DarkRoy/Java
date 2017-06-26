@@ -24,6 +24,6 @@ public class Robot extends CHAR implements IEnemy {
 	public void DamageDealer(int ATK, int AA) {
 		DMG = ATK - (this.AP / AA);
 		this.HP=this.HP -  DMG;
-		System.out.println(this.HP +" Robot");
+		
 		
 	}}
