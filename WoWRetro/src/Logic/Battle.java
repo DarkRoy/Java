@@ -44,12 +44,11 @@ public class Battle {
 	/**
 	 * Fuehrt den Lebensabzug durch
 	 * @param AA = AttackArt (Schwerthieb oder Schildschlag)
+	 * 
 	 */
 	public void Attack(int AA){
 		
-		/**
-		 *  AA = Attack ARt (Schwerthieb oder Schildschlag)
-		 */
+		
 		this.AA=AA;
 		// Player Damage
 		this.ATK = Player.getATK();
@@ -78,54 +77,73 @@ public class Battle {
 	
 	}
 	
-	
+	/**
+	 * gibt den SchlagDamage vom Spieler zurück
+	 * @return Schlag1
+	 */
 	public int getSchlag1(){
 		return Schlag1;
 	}
+	/**
+	 * gibt den SchlagDamage vom Enemy zurück
+	 * @return Schlag2
+	 */
 	public int getSchlag2(){
 		return Schlag2;
 	}
+	/**
+	 * gibt die Lebenswerte des Spielers zurück
+	 * @return HPP 
+	 */
 	public int getHPP(){
 		return HPP;
 	}
+	/**
+	 * gibt die Lebenswerte des Gegners zurück
+	 * @return HPE 
+	 */
 	public int getHPE(){
 		return HPE;
 	}
+	/**
+	 * Stellt den Gegnernamen oder den Tod vom Spieler zu verfügung
+	 * @return Ending
+	 */
 	public String getEnding(){
 		return Ending;
 	}
 	
 	/**
-	 * 
+	 * HPE wird wird gesetzt
 	 * @param HPE = Health Point Enemy
 	 */
 	public void setHPE(int HPE){
 		 this.HPE=HPE;
 	}
 	/**
-	 * 
-	 * @param HPP = Health Point Player
+	 * HPP wird gesetzt
+	 * @param HPP = Health Points Player 
 	 */
 	public void setHPP(int HPP){
 		 this.HPP=HPP;
 	}
 	/**
-	 * 
-	 * @param Schlag1 = Schlag Damage vom Player dieser Runde
+	 * Schlag Damage vom Player dieser Runde wird gesetzt
+	 * @param Schlag1 
 	 */
 	public void setSchlag1(int Schlag1){
 		 this.Schlag1=Schlag1;
 	}
 	/**
-	 * 
-	 * @param Schlag2 = Schlag Damage vom Enemy dieser Runde
+	 * Schlag Damage vom Enemy dieser Runde wird gesetzt
+	 * @param Schlag2 
 	 */
 	public void setSchlag2(int Schlag2){
 		 this.Schlag2=Schlag2;
 	}
 	/**
-	 * 
-	 * @param Schlag2 = Auskommen der Runde
+	 * Auskommen der Runde wird gesetzt
+	 * @param Schlag2
 	 */
 	public void getEnding(String Ending){
 		this.Ending = Ending;

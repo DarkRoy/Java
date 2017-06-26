@@ -144,10 +144,7 @@ public class BattleGUI  extends JFrame implements ActionListener{
 			lblDamage1.setText("Du hast " + B.getSchlag2() + " Schaden erlitten!");
 			lblLebenGegner.setText(B.getHPE() + " Leben");
 			lblLebenPlayer.setText(B.getHPP() + " Leben");
-			if (B.getHPE() <= 0){
-				lblDamage2.setText("Gegner wurde besiegt. Gegnerischer " +B.getEnding()+ " ist erschienen.");
-				lblLebenGegner.setText(B.getHPE() + " Leben");
-			}
+		
 			if (B.getEnding().equals("Bender")){
 				ImageIcon imageE = new ImageIcon("src/RobotBoy.PNG");
 				lblImage2.setIcon(imageE);	
@@ -181,10 +178,7 @@ public class BattleGUI  extends JFrame implements ActionListener{
 			lblDamage1.setText("Du hast " + B.getSchlag2() + " Schaden erlitten!");
 			lblLebenGegner.setText(B.getHPE() + " Leben");
 			lblLebenPlayer.setText(B.getHPP() + " Leben");
-			if (B.getHPE() <= 0){
-				lblDamage2.setText("Gegner wurde besiegt. Gegnerischer " +B.getEnding()+ " ist erschienen.");
-				lblLebenGegner.setText(B.getHPE() + " Leben");
-			}
+			
 			if (B.getEnding().equals("Bender")){
 				ImageIcon imageE = new ImageIcon("src/RobotBoy.PNG");
 				lblImage2.setIcon(imageE);	
