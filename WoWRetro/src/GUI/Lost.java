@@ -10,8 +10,16 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+/**
+ * 
+ * @author Nicola / Nemanja / Garcia
+ *
+ */
+
 public class Lost extends JFrame implements ActionListener{
-	
+	/**
+	 * Hier werden JLabel, JButton und ImageIcons erstellt
+	 */
 	
 	JLabel lostinfo = new JLabel("Sie haben verloren");
 	JLabel lblBackGround = new JLabel("");
@@ -52,7 +60,9 @@ public class Lost extends JFrame implements ActionListener{
 		this.add(lblBackGround);
 		lblBackGround.setIcon(BackGround);
 		
-		
+		/**
+		 * Die Buttons BtnReset und BtnClose werden dem Actionlistener zugewiesen
+		 */
 		BtnReset.addActionListener(this);
 		BtnClose.addActionListener(this);
 		
