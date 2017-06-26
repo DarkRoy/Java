@@ -111,7 +111,7 @@ public class CHAR implements IEnemy {
 
 	@Override
 	/**
-	 * Setzt den maximalen Lebenswert
+	 * Setzt den maximalen lebens-Anfangswert
 	 */
 	public void setMAXHP(int MAXHP) {
 		this.MAXHP = MAXHP;

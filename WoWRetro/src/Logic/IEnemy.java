@@ -1,11 +1,30 @@
 package Logic;
 
+/**
+ * @author Nicola / Nemanja / Garcia
+ */
+
 public interface IEnemy {
 
-	// Interface
+	/**
+	 * @return gibt die Lebenswerte zurück
+	 */
 	public int getHP();
+	/**
+	 * 
+	 * @param HP ist eine Variable des Datentyps int und bestimmt den Lebenswert
+	 */
 	public void setHP(int HP);
+	
+	/**
+	 * 
+	 * @return gibt den Schadenswert zurück
+	 */
 	public int getATK();
+	/**
+	 * 
+	 * @param ATK ist eine Variable des Datentyps int und  bestimmt den Schadenswert
+	 */
 	public void setATK(int ATK);
 	public String getName();
 	public void setName(String Name);
