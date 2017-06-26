@@ -23,7 +23,8 @@ public class EnemyList {
 		
 	}
 	/**
-	 * Speichert die mitgegeben Enemies in die ArrayList
+	 * Diese Methode speichert IEnemy Objekte in die ArrayList EnemyList
+	 * @param Enemy Variable mit dem Datentyp IEnemy
 	 */
 	public void AddEnemy(IEnemy Enemy) {
 		EnemyList.add(Enemy);
