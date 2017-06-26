@@ -7,10 +7,10 @@ package Logic;
 public class Lama extends CHAR implements IEnemy {
 
 	/**
-	 * @param HP Wie viel leben der Gegner hat
-	 * @param ATK Wieviel Schaden der Gegner macht
- 	 * @param Name Wie der Gegner heisst
-	 * @param MAXHP Was für ein maximales Leben der Gegner hat
+	 * @param HP Wie viel leben das Lama hat
+	 * @param ATK Wieviel Schaden das Lama macht
+ 	 * @param Name Wie das Lama heisst
+	 * @param MAXHP Was für ein anfangs Leben das Lama hat
 	 */
 	public Lama(int HP, int ATK, String Name, int MAXHP) {
 		super(HP,ATK,Name,MAXHP);

@@ -9,27 +9,39 @@ import GUI.Lost;
 
 public class Battle {
 
-	// CHAR zur verarbeitung eines Enemies
+	/**
+	 *  CHAR zur verarbeitung eines Enemies
+	 */
 	private CHAR Enemy=new CHAR(0, 0, null,0);
 	
-	// Der Spieler
+	/**
+	 *  Der Spieler
+	 */
 	private Player Player=new Player(100,15,"Spieler",100);
 	
-	// ADD Enemy 
+	/**
+	 *  ADD Enemy 
+	 */
 	private AddEnemy AE=new AddEnemy();
 	
-	// Variablen fuer weiterverarbeitungen
+	/**
+	 *  Variablen fuer weiterverarbeitungen
+	 */
 	private int ATK;
 	private int AA;
 	
-	// Variablen fuer das GUI
+	/**
+	 *  Variablen fuer das GUI
+	 */
 	private int Schlag1;
 	private int Schlag2;
 	private String Ending;
 	private int HPP;
 	private int HPE;
 	
-	// Holt den ersten Enemy und setzt parameter fuer das GUI
+	/**
+	 *  Holt den ersten Enemy und setzt die parameter fuer das GUI
+	 */
 	public Battle() {
 		AE.AddEnemyEntry();
 		this.Enemy=(CHAR) AE.getEnemy();
@@ -42,14 +54,14 @@ public class Battle {
 	
 	
 	/**
-	 * Fuehrt den Lebensabzug durch
-	 * @param AA = AttackArt (Schwerthieb oder Schildschlag)
+	 * Fuehrt den Lebensabzug durch und Setzt HPE und HPP.
+	 * Dazu uebruepft es den Lebenstatus von den CHAR's (this.checkVitals();).
+	 * Durch den AA wert kann mit dem ATK Wert in den CHAR Unterklassen der Schaden berehcnet werden.
+	 * @param AA AttackArt 
 	 */
 	public void Attack(int AA){
 		
-		/**
-		 *  AA = Attack ARt (Schwerthieb oder Schildschlag)
-		 */
+		
 		this.AA=AA;
 		// Player Damage
 		this.ATK = Player.getATK();
@@ -78,54 +90,73 @@ public class Battle {
 	
 	}
 	
-	
+	/**
+	 * gibt den SchlagDamage vom Spieler zurück
+	 * @return Schlag1
+	 */
 	public int getSchlag1(){
 		return Schlag1;
 	}
+	/**
+	 * gibt den SchlagDamage vom Enemy zurück
+	 * @return Schlag2
+	 */
 	public int getSchlag2(){
 		return Schlag2;
 	}
+	/**
+	 * gibt die Lebenswerte des Spielers zurück
+	 * @return HPP 
+	 */
 	public int getHPP(){
 		return HPP;
 	}
+	/**
+	 * gibt die Lebenswerte des Gegners zurück
+	 * @return HPE 
+	 */
 	public int getHPE(){
 		return HPE;
 	}
+	/**
+	 * Stellt den Gegnernamen oder den Tod vom Spieler zu verfügung
+	 * @return Ending
+	 */
 	public String getEnding(){
 		return Ending;
 	}
 	
 	/**
-	 * 
+	 * HPE wird wird gesetzt
 	 * @param HPE = Health Point Enemy
 	 */
 	public void setHPE(int HPE){
 		 this.HPE=HPE;
 	}
 	/**
-	 * 
-	 * @param HPP = Health Point Player
+	 * HPP wird gesetzt
+	 * @param HPP = Health Points Player 
 	 */
 	public void setHPP(int HPP){
 		 this.HPP=HPP;
 	}
 	/**
-	 * 
-	 * @param Schlag1 = Schlag Damage vom Player dieser Runde
+	 * Schlag Damage vom Player dieser Runde wird gesetzt
+	 * @param Schlag1 = Schlagdamage des Players
 	 */
 	public void setSchlag1(int Schlag1){
 		 this.Schlag1=Schlag1;
 	}
 	/**
-	 * 
-	 * @param Schlag2 = Schlag Damage vom Enemy dieser Runde
+	 * Schlag Damage vom Enemy dieser Runde wird gesetzt
+	 * @param Schlag2 = Schlagdamage des Gegners
 	 */
 	public void setSchlag2(int Schlag2){
 		 this.Schlag2=Schlag2;
 	}
 	/**
-	 * 
-	 * @param Schlag2 = Auskommen der Runde
+	 * Auskommen der Runde wird gesetzt
+	 * @param Ending = Was passiert ist (neuer Gegner / spieler Tod)
 	 */
 	public void getEnding(String Ending){
 		this.Ending = Ending;

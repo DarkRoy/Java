@@ -1,28 +1,21 @@
 package GUI;
 
 import java.awt.Color;
-import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Date;
-import java.util.concurrent.TimeUnit;
-
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
-
-import Logic.AddEnemy;
 import Logic.Battle;
-import Logic.CHAR;
-
 import java.awt.Font;
 
 /**
  * @author Nicola / Nemanja / Garcia
  */
 
+@SuppressWarnings("serial")
 public class BattleGUI  extends JFrame implements ActionListener{
 
 	JButton JBATK1=new JButton();
@@ -127,6 +120,7 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		
 }
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public void actionPerformed(ActionEvent event) {
 		if(event.getSource()==JBATK1){
@@ -144,10 +138,7 @@ public class BattleGUI  extends JFrame implements ActionListener{
 			lblDamage1.setText("Du hast " + B.getSchlag2() + " Schaden erlitten!");
 			lblLebenGegner.setText(B.getHPE() + " Leben");
 			lblLebenPlayer.setText(B.getHPP() + " Leben");
-			if (B.getHPE() <= 0){
-				lblDamage2.setText("Gegner wurde besiegt. Gegnerischer " +B.getEnding()+ " ist erschienen.");
-				lblLebenGegner.setText(B.getHPE() + " Leben");
-			}
+		
 			if (B.getEnding().equals("Bender")){
 				ImageIcon imageE = new ImageIcon("src/RobotBoy.PNG");
 				lblImage2.setIcon(imageE);	
@@ -181,10 +172,7 @@ public class BattleGUI  extends JFrame implements ActionListener{
 			lblDamage1.setText("Du hast " + B.getSchlag2() + " Schaden erlitten!");
 			lblLebenGegner.setText(B.getHPE() + " Leben");
 			lblLebenPlayer.setText(B.getHPP() + " Leben");
-			if (B.getHPE() <= 0){
-				lblDamage2.setText("Gegner wurde besiegt. Gegnerischer " +B.getEnding()+ " ist erschienen.");
-				lblLebenGegner.setText(B.getHPE() + " Leben");
-			}
+			
 			if (B.getEnding().equals("Bender")){
 				ImageIcon imageE = new ImageIcon("src/RobotBoy.PNG");
 				lblImage2.setIcon(imageE);	

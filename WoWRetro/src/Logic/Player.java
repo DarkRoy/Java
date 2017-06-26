@@ -8,7 +8,7 @@ public class Player extends CHAR implements IEnemy {
 	 * @param HP Wie viel leben der Spieler hat
 	 * @param ATK Wieviel Schaden der Spieler macht
  	 * @param Name Wie der Spieler heisst
-	 * @param MAXHP Was für ein maximales Leben der spieler hat
+	 * @param MAXHP Was für ein anfangs Leben der spieler hat
 	 */
 	public Player(int HP, int ATK, String Name, int MAXHP) {
 		super(HP,ATK,Name,MAXHP);
@@ -28,7 +28,8 @@ public class Player extends CHAR implements IEnemy {
 	
 	/**
 	 * Berechnet den Schaden am Spieler
-	 * @param Int Variabeln Für AttackArt und Schaden
+	 * @param ATK = Schadensmenge
+	 * @param AA = Attack Art
 	 */
 	@Override
 	public void DamageDealer(int ATK, int AA) {
