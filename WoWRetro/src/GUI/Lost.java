@@ -12,6 +12,7 @@ import javax.swing.JLabel;
 
 public class Lost extends JFrame implements ActionListener{
 	
+	
 	JLabel lostinfo = new JLabel("Sie haben verloren");
 	JLabel lblBackGround = new JLabel("");
 	JButton BtnReset = new  JButton();
@@ -19,7 +20,9 @@ public class Lost extends JFrame implements ActionListener{
 	ImageIcon BackGround = new ImageIcon("src/Kampf-GUI.PNG");
 	
 
-	
+	/**
+	 * Beschreibt das Aussehen des GUIs
+	 */
 	public Lost(){
 		
 		this.setForeground(new Color(0, 0, 0));
@@ -61,13 +64,21 @@ public class Lost extends JFrame implements ActionListener{
 		
 		
 	}
-	
+	/**
+	 * Die Aktionen bei betätigen von Buttons werden hier bestimmt
+	 */
 	public void actionPerformed(ActionEvent event) {
+		/**
+		 * Falls BtnReset gedrückt wird, wird das BattleGUI gestartet und das LostGUI wird beendet
+		 */
 		if(event.getSource()==BtnReset){
 			BattleGUI GUI=new BattleGUI();
 			this.dispose();
 			
 		}
+		/**
+		 * falls BtnClose gedrückt wird, wird die komplette Anwendung beendet
+		 */
 		if(event.getSource()==BtnClose){
 			System.exit(0);
 		}
