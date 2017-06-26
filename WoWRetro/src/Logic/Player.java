@@ -17,9 +17,9 @@ public class Player extends CHAR implements IEnemy {
 		this.Name=Name;
 	}
 
-	/** ^
+	/** 
 	 * In dieser Methode wird die Stärke der Attacke mit einer Zufallszahl berechnet
-	 * @RETURN Gibt die Stärke der Attacke aus als Variabel ATK
+	 * @return Gibt die Stärke der Attacke aus als Variabel ATK
 	 */
 
 	public int getATK() {
