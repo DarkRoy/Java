@@ -2,6 +2,7 @@ package Logic;
 
 public interface IEnemy {
 
+	// Interface
 	public int getHP();
 	public void setHP(int HP);
 	public int getATK();
@@ -12,7 +13,5 @@ public interface IEnemy {
 	public void setMAXHP(int MAXHP);
 	void DamageDealer(int ATK, int AA);
 	public int getDamageRec();
-	
-	
-	
+
 }
