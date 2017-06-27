@@ -106,7 +106,7 @@ public class CHAR implements IEnemy {
 	}
 
 	/**
-	 * Gibt den maximalen Lebenswert zurück
+	 * Gibt den Anfangslebenswert zurück
 	 * @return MaxHP
 	 */
 	public int getMAXHP() {
@@ -115,12 +115,8 @@ public class CHAR implements IEnemy {
 
 	@Override
 	/**
-<<<<<<< HEAD
-	 * Setzt den maximalen lebens-Anfangswert
-=======
-	 * Setzt den maximalen Lebenswert
-	 * @param MAXHP 
->>>>>>> branch 'master' of https://github.com/DarkRoy/Java.git
+	 * Setzt den Anfangslebenswert
+	 * @param MAXHP ist der Anfangslebenswert
 	 */
 	public void setMAXHP(int MAXHP) {
 		this.MAXHP = MAXHP;

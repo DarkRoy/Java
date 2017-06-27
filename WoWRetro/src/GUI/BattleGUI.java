@@ -134,6 +134,7 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		
 			B.Attack(AA);
 			JBATK1.disable();
+			JBATK2.disable();
 			lblDamage2.setText("Gegner hat "+ B.getSchlag1() +" Schaden erlitten!");
 			lblDamage1.setText("Du hast " + B.getSchlag2() + " Schaden erlitten!");
 			lblLebenGegner.setText(B.getHPE() + " Leben");
@@ -154,6 +155,8 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		while (elapsedTime < 0.5*1000) {
 		    elapsedTime = (new Date()).getTime() - startTime;
 	}
+	JBATK1.enable();
+	JBATK2.enable();
 		
 }
 		
@@ -168,6 +171,7 @@ public class BattleGUI  extends JFrame implements ActionListener{
 			long elapsedTime = 0L;
 			B.Attack(AA);
 			JBATK1.disable();
+			JBATK2.disable();
 			lblDamage2.setText("Gegner hat "+ B.getSchlag1() +" Schaden erlitten!");
 			lblDamage1.setText("Du hast " + B.getSchlag2() + " Schaden erlitten!");
 			lblLebenGegner.setText(B.getHPE() + " Leben");
@@ -189,6 +193,7 @@ public class BattleGUI  extends JFrame implements ActionListener{
 		    elapsedTime = (new Date()).getTime() - startTime;
 		}
 		JBATK1.enable();
+		JBATK2.enable();
 		
 }
 		

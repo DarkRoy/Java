@@ -5,6 +5,7 @@ public class Start {
 /**
  * 
  *  @author Nicola / Nemanja / Garcia
+ *  @version 1.0
  */
 
 	public static void main(String[] args) {

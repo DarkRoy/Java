@@ -1,5 +1,9 @@
 package Logic;
 
+/**
+ * @author Nicola / Nemanja / Garcia
+ *
+ */
 public class Player extends CHAR implements IEnemy {
 
 	int AP = 5;
